@@ -1,0 +1,549 @@
+.donor-00A {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    min-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 34px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+h4 {
+    font-size: 24px;
+}
+
+h5 {
+    font-size: 20px;
+}
+
+h6 {
+    font-size: 18px;
+}
+
+hr {
+  border: none;
+  border-bottom: 2px solid #ddd;
+  margin: 20px 10px;
+  width: 90%;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 18px;
+  color: #7A52F4;
+}
+
+.search-bar {
+    background: rgba(235, 240, 240, 0.5);
+    border-radius: 23px;
+    padding: 8px 16px;
+    height: 20px;
+    width: 25%;
+}
+
+.search-bar input {
+  border: none;
+  background: transparent;
+  outline: none;
+  margin-left: 10px;
+}
+
+.moon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.notification {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-stuff {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.profile {
+    width: 160px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: #7A52F4;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+.username {
+    position: relative;
+    color: #FFFFFF;
+    font-size: 14px;
+    margin-left: 5px;
+    bottom: 10px;
+}
+
+.downarrow {
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.profile-picture img {
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 75px;
+    box-shadow: 0 3px 4px rgba(153, 155, 168, 0.25);
+}
+
+p {
+    color: #5D5D5B;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.barpage {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 250px auto;
+    grid-template-rows: auto;
+    gap: 100px;
+}
+
+.dashboard {
+    width: 100%;
+}
+
+/*card stuff*/
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 380px);
+    grid-template-rows: repeat(4, 200px);
+    gap: 40px;
+}
+
+.card {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.25);
+}
+
+.title {
+    padding-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.title img {
+    padding-right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+.card h2 {
+    text-align: center;
+}
+
+.card a {
+    position: absolute;
+    right: 30px;
+}
+
+.card span {
+    position: absolute;
+    right: 15px;
+}
+
+.cards div:nth-child(1) {
+    background-color: #6bbb6f7a;
+}
+
+.cards div:nth-child(1) .title {
+    color: #38923b;
+}
+
+.cards div:nth-child(1) h2 {
+    color: #38923b;
+}
+
+.cards div:nth-child(1) a {
+    color: #38923b;
+}
+
+.cards div:nth-child(1) span {
+    color: #38923b;
+}
+
+.cards div:nth-child(2) {
+    background-color: #42a4f57d;
+}
+
+.cards div:nth-child(2) .title {
+    color: #2982ca;
+}
+
+.cards div:nth-child(2) h2 {
+    color: #2982ca;
+}
+
+.cards div:nth-child(2) a {
+    color: #2982ca;
+}
+
+.cards div:nth-child(2) span {
+    color: #2982ca;
+}
+
+.cards div:nth-child(3) {
+    background-color: #ffbb0082;
+}
+
+.cards div:nth-child(3) .title {
+    color: #997000;
+}
+
+.cards div:nth-child(3) h2 {
+    color: #997000;
+}
+
+.cards div:nth-child(3) a {
+    color: #997000;
+}
+
+.cards div:nth-child(3) span {
+    color: #997000;
+}
+
+.cards div:nth-child(4) {
+    background-color: #9b27b050;
+}
+
+.cards div:nth-child(4) .title {
+    color: #9C27B0;
+}
+
+.cards div:nth-child(4) h2 {
+    color: #9C27B0;
+}
+
+.cards div:nth-child(4) a {
+    color: #9C27B0;
+}
+
+.cards div:nth-child(4) span {
+    color: #9C27B0;
+}
+
+.cards div:nth-child(5) {
+    background-color: #e91e624a;
+}
+
+.cards div:nth-child(5) .title {
+    color: #E91E63;
+}
+
+.cards div:nth-child(5) h2 {
+    color: #E91E63;
+}
+
+.cards div:nth-child(5) a {
+    color: #E91E63;
+}
+
+.cards div:nth-child(5) span {
+    color: #E91E63;
+}
+
+.cards div:nth-child(6) {
+    background-color: #ff56224d;
+}
+
+.cards div:nth-child(6) .title {
+    color: #FF5722;
+}
+
+.cards div:nth-child(6) h2 {
+    color: #FF5722;
+}
+
+.cards div:nth-child(6) a {
+    color: #FF5722;
+}
+
+.cards div:nth-child(6) span {
+    color: #FF5722;
+}
+
+.cards div:nth-child(7) {
+    background-color: #4dafff49;
+}
+
+.cards div:nth-child(7) .title {
+    color: #002D80;
+}
+
+.cards div:nth-child(7) h2 {
+    color: #002D80;
+}
+
+.cards div:nth-child(7) a {
+    color: #002D80;
+}
+
+.cards div:nth-child(7) span {
+    color: #002D80;
+}
+
+.small-card-text {
+    font-size: small;
+    text-align: center;
+}
+
+/*Recommended Projects table*/
+
+.table-header {
+    background-color: #EBF0F0;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.table-header .table-rows {
+    height: 60px;
+}
+
+.table-body .table-rows {
+    height: 100px;
+    border-radius: 20px;
+    border: 2px solid #EBF0F0;
+    margin-bottom: 10px;
+}
+
+.tables {
+    padding-bottom: 15px;
+}
+
+.table-rows {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-right: 10px;
+}
+
+.cell, .tall-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 230px;
+}
+
+.table-body .table-rows .cell:nth-child(1) {
+    justify-content: flex-start;
+}
+
+.cell h6 {
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.cell h5 {
+    padding-left: 10px;
+    white-space: nowrap;
+}
+
+.cell p {
+    color: #000;
+    padding-left: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.tall-cell p {
+    color: #000;
+    padding-left: 10px;
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100px;
+    height: 10px;
+    background-color: #03885061;
+    border-radius: 10px;
+}
+
+.progress-made {
+    background-color: #005934;
+    height: 10px;
+    border-radius: 10px;
+}
+
+.attachment-row {
+    width: 100px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.attachment-row img {
+    border-radius: 5px;
+}
+
+/*activity table*/
+
+.activity-table {
+    width: 1350px;
+}
+
+.activity-table-header {
+    width: 1365px;
+}
+
+.table-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.table-img img {
+    object-fit: cover;
+    width: 40px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.profile-icon {
+    background-color: #2982ca;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.profile-icon img {
+    object-fit: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.download-opentab {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.download-opentab button {
+    background-color: #FFFFFF;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*footer*/
+
+footer {
+    background-color: #EBF0F0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    padding: 0;
+}
+
+footer div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+footer div a, a:active{
+    color: #000;
+    text-decoration: none;
+    padding-right: 20px;
+}
+
+footer div h6 {
+    padding-right: 20px;
+}
+
+.copyright {
+    position: absolute;
+    left: 40px;
+}
+
+.economic-info {
+    position: absolute;
+    right: 40px;
+}
+
+/*side bar*/
+.side-bar {
+    width: 100%;
+}
+
+.side-bar p {
+    margin-left: 10px;
+}
+
+.side-bar a {
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    margin-left: 10px;
+    height: 55px;
+    border-radius: 30px;
+    text-decoration: none;
+    color: #5D5D5B;
+    width: 90%;
+}
+
+.side-bar a div {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.side-bar .selected {
+    background-color: #7A52F4;
+    color: #FFFFFF;
+}
+
+.side-bar .selected div {
+    background-color: #8964f7;
+}

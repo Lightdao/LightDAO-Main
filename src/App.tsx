@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingV from "./pages/LandingV";
+import Donor00A from "./pages/Donor00A";
+import Donor01A from "./pages/Donor01A";
 
 function App() {
   const action = useNavigationType();
@@ -46,6 +48,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingV />} />
+      <Route path="/Donor00A" element={<Donor00A />} />
+      <Route path="/Donor01A" element={<Donor01A />} />
     </Routes>
   );
 }
