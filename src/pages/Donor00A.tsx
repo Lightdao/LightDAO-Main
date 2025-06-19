@@ -1,7 +1,8 @@
-import { DonorSideBar } from './DonorSideBar';
-import { HeaderBar } from './DonorHeader';
-import { Footer } from './DonorFooter';
-import { setSideNumber } from './DonorSideBar';
+import { DonorSideBar } from '../components/DonorSideBar';
+import { HeaderBar } from '../components/DonorHeader';
+import { Footer } from '../components/DonorFooter';
+import { setSideNumber } from '../components/DonorSideBar';
+
 import './Donor00A.css';
 
 const Donor00A: React.FC<{}> = () => {
