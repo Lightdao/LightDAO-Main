@@ -348,6 +348,7 @@ button:hover {
 
 .tables {
     padding-bottom: 15px;
+    width: 1250px;
 }
 
 .table-rows {
@@ -356,7 +357,7 @@ button:hover {
     padding-right: 10px;
 }
 
-.cell, .tall-cell {
+.cell, .tall-cell, .activity-cell {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,11 +421,11 @@ button:hover {
 /*activity table*/
 
 .activity-table {
-    width: 1350px;
+    width: 1250px;
 }
 
 .activity-table-header {
-    width: 1365px;
+    width: 1265px;
 }
 
 .table-img {

@@ -2,7 +2,6 @@ import { DonorSideBar } from '../components/DonorSideBar';
 import { HeaderBar } from '../components/DonorHeader';
 import { Footer } from '../components/DonorFooter';
 import { setSideNumber } from '../components/DonorSideBar';
-
 import './Donor00A.css';
 
 const Donor00A: React.FC<{}> = () => {
@@ -180,11 +179,11 @@ const ActivityFeed: React.FC<{}> = () => {
 
     const tableElements = tableList.map((item) => (
         <div className="table-rows activity-table" key={item.id}>
-            <div className="cell"><p><img src={item.activity} alt="" /></p></div>
+            <div className="activity-cell"><p><img src={item.activity} alt="" /></p></div>
             <div className="tall-cell"><p>{item.activitytitle}</p></div>
             <div className="tall-cell"><p>{item.description}</p></div>
-            <div className="cell"><p>{item.datetime}</p></div>
-            <div className="cell"><div className="download-opentab"><button><img src={item.openNewTab ? "/open_new_tab.svg" : ""} alt="" /></button> <button><img src={item.download ? "/download.svg" : ""} alt="" /></button></div></div>
+            <div className="activity-cell"><p>{item.datetime}</p></div>
+            <div className="activity-cell"><div className="download-opentab"><button><img src={item.openNewTab ? "/open_new_tab.svg" : ""} alt="" /></button> <button><img src={item.download ? "/download.svg" : ""} alt="" /></button></div></div>
         </div>));
     return (
         <div className="table-body">{tableElements}</div>
@@ -275,11 +274,11 @@ const DonorDashboard: React.FC<{}> = () => {
             <div className="tables">
                 <div className="table-header activity-table-header">
                     <div className="table-rows activity-table">
-                        <div className="cell"><p>Activity</p></div>
-                        <div className="cell"><p>Activity Title</p></div>
-                        <div className="cell"><p>Description</p></div>
-                        <div className="cell"><p>Date & Time</p></div>
-                        <div className="cell"><p>Quick Actions</p></div>
+                        <div className="activity-cell"><p>Activity</p></div>
+                        <div className="activity-cell"><p>Activity Title</p></div>
+                        <div className="activity-cell"><p>Description</p></div>
+                        <div className="activity-cell"><p>Date & Time</p></div>
+                        <div className="activity-cell"><p>Quick Actions</p></div>
                     </div>
                 </div>
                 <ActivityFeed />
