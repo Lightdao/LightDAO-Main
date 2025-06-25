@@ -2,7 +2,8 @@ import { DonorSideBar } from '../components/DonorSideBar';
 import { HeaderBar } from '../components/DonorHeader';
 import { Footer } from '../components/DonorFooter';
 import { setSideNumber } from '../components/DonorSideBar';
-import './Donor00A.css';
+import { GetAttachments } from '../components/DonorAttachments';
+import './Donor.css';
 
 const Donor00A: React.FC<{}> = () => {
     setSideNumber(0);
@@ -18,100 +19,69 @@ const Donor00A: React.FC<{}> = () => {
     );
 }
 
-interface GetAttachmentProps {
-    array: boolean[];
-}
-
-const GetAttachments: React.FC<GetAttachmentProps> = ({array}) => {
-    let count = array.filter(element => element === true).length;
-    const iconArray = ["/PDF.svg", "/Word.svg", "/PowerPoint.svg", "/Excel.svg", ""];
-    const extraIcon = "/+1.svg";
-    let imageArray = [];
-
-    for (let i = 0; i < array.length; i++)
-    {
-        if (array[i] === true)
-        {
-            imageArray.push(<img key={i} src={iconArray[i]} alt="attachment icon"/>);
-        }
-
-        if (imageArray.length == 3)
-        {
-            break;
-        }
-    }
-
-    if (count > 3)
-    {
-        imageArray.push(<img key={-1} src={extraIcon} width={14} height={18} alt="attachment icon"/>);
-    }
-
-    return imageArray;
-}
-
 const RecommendedProjects: React.FC<{}> = () => {
 
     let tableList = [
     {
         id: 1,
-        projectname: "Election Season",
+        projectName: "Election Season",
         imageIcon: "/election season.png",
         blockchain: "Solana",
         owner: "Ivan Morais",
         goal: "4.45 SOL",
         progress: 75,
         attachments: [false, true, true, true, true],
-        datecreated: "20th Dec, 2024"
+        dateCreated: "20th Dec, 2024"
     },
     {
         id: 2,
-        projectname: "Lorr's Ad Issue",
+        projectName: "Lorr's Ad Issue",
         imageIcon: "/Lorr.png",
         blockchain: "Ethereum",
         owner: "Langke Zambo",
         goal: "5.13 ETH",
         progress: 45,
         attachments: [true, false, true, true, false],
-        datecreated: "19th Dec, 2024"
+        dateCreated: "19th Dec, 2024"
     },
     {
         id: 3,
-        projectname: "Venture Capitalist",
+        projectName: "Venture Capitalist",
         imageIcon: "venture.png",
         blockchain: "Polygon",
         owner: "Cecilia Pozo",
         goal: "3.59 POL",
         progress: 35,
         attachments: [false, true, true, true, false],
-        datecreated: "17th Dec, 2024"
+        dateCreated: "17th Dec, 2024"
     },
     {
         id: 4,
-        projectname: "Tracking on the Go",
+        projectName: "Tracking on the Go",
         imageIcon: "tracking on the go.png",
         blockchain: "Hedera",
         owner: "Matilda Evans",
         goal: "1.45 HBAR",
         progress: 60,
         attachments: [false, true, true, true, true],
-        datecreated: "15th Dec, 2024"
+        dateCreated: "15th Dec, 2024"
     },
     {
         id: 5,
-        projectname: "Behind One of...",
+        projectName: "Behind One of...",
         imageIcon: "behind.png",
         blockchain: "Algorand",
         owner: "Maeng Yeo-Jin",
         goal: "14.15 ALGO",
         progress: 80,
         attachments: [true, false, false, true, false],
-        datecreated: "13th Dec, 2024"
+        dateCreated: "13th Dec, 2024"
     }
     ];
 
     const tableElements = tableList.map((item) => (
         <div className="table-rows" key={item.id}>
-            <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectname}</p></div>
+            <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
             <div className="cell"><p>{item.goal}</p></div>
@@ -121,7 +91,7 @@ const RecommendedProjects: React.FC<{}> = () => {
                     {<GetAttachments array={item.attachments} />}
                 </div>
             </div>
-            <div className="cell"><p>{item.datecreated}</p></div>
+            <div className="cell"><p>{item.dateCreated}</p></div>
         </div>));
     return (
         <div className="table-body">{tableElements}</div>

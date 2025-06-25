@@ -343,7 +343,7 @@ button:hover {
     text-align: center;
 }
 
-/*Recommended Projects table*/
+/*recommended projects table*/
 
 .table-header {
     background-color: #EBF0F0;
@@ -365,6 +365,11 @@ button:hover {
 .tables {
     padding-bottom: 15px;
     width: 1250px;
+}
+
+.pd-tables {
+    padding-bottom: 15px;
+    width: 1400px;
 }
 
 .table-rows {
@@ -556,3 +561,6 @@ footer div h6 {
 .side-bar .selected div {
     background-color: #8964f7;
 }
+
+/*project navigation*/
+
