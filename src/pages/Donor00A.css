@@ -71,10 +71,26 @@ hr {
     border-radius: 50%;
 }
 
+.notification-amount {
+    position: absolute;
+    left: 90px;
+    top: 10px;
+    font-size: 11px;
+    width: 13px;
+    height: 13px;
+    background-color: #F71111;
+    color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
 .user-stuff {
     display: flex;
     justify-content: space-between;
     width: 300px;
+    position: relative;
 }
 
 .profile {
@@ -419,14 +435,6 @@ button:hover {
 }
 
 /*activity table*/
-
-.activity-table {
-    width: 1250px;
-}
-
-.activity-table-header {
-    width: 1265px;
-}
 
 .table-img {
     width: 40px;
