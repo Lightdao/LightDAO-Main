@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { DonorSideBar } from '../components/DonorSideBar';
 import { HeaderBar } from '../components/DonorHeader';
 import { Footer } from '../components/DonorFooter';
@@ -5,56 +6,8 @@ import { setSideNumber } from '../components/DonorSideBar';
 import { GetAttachments } from '../components/DonorAttachments';
 import './Donor.css';
 
-const Donor01A: React.FC<{}> = () => {
-    setSideNumber(1);
-    return (
-        <div className="donor-00A">
-            <HeaderBar />
-            <div className="barpage">
-                <DonorSideBar />
-                <ProjectDashboard />
-            </div>
-            <Footer />
-        </div>
-    );
-}
-
-const ProjectDashboard: React.FC<{}> = () => {
-    return (
-    <div className="dashboard">
-        <section>
-            <p>Donor - Home &gt; PROJECTS DASHBOARD</p>
-            <h1>Projects Dashboard</h1>
-            <p>
-                Here, you can see active projects displayed in a comprehensive list...
-            </p>
-            <div className="pd-tables">
-                <div className="table-header">
-                    <div className="table-rows">
-                        <div className="cell"><p>Project Title</p></div>
-                        <div className="cell"><p>Blockchain</p></div>
-                        <div className="cell"><p>Project Owner</p></div>
-                        <div className="cell"><p>Funding Goal</p></div>
-                        <div className="cell"><p>Funding Progress</p></div>
-                        <div className="cell"><p>Attachments</p></div>
-                        <div className="cell"><p>Date Created</p></div>
-                        <div className="cell"><p>Expiration Date</p></div>
-                    </div>
-                </div>
-                <Projects />
-            </div>
-
-            <div className="project-navigation">
-
-            </div>
-        </section>
-    </div>
-    );
-}
-
-const Projects: React.FC<{}> = () => {
-
-    let tableList = [
+//for now this is global, when backend is implemented it will be removed
+let tableList = [
     {
         id: 1,
         projectName: "Election Season",
@@ -114,9 +67,114 @@ const Projects: React.FC<{}> = () => {
         attachments: [true, false, false, true, false],
         dateCreated: "13th Dec, 2024",
         expirationDate: "03rd Jan, 2025"
+    },
+    {
+        id: 6,
+        projectName: "Election Season",
+        imageIcon: "/election season.png",
+        blockchain: "Solana",
+        owner: "Ivan Morais",
+        goal: "4.45 SOL",
+        progress: 75,
+        attachments: [false, true, true, true, true],
+        dateCreated: "20th Dec, 2024",
+        expirationDate: "12th Jan, 2025"
+    },
+    {
+        id: 7,
+        projectName: "Lorr's Ad Issue",
+        imageIcon: "/Lorr.png",
+        blockchain: "Ethereum",
+        owner: "Langke Zambo",
+        goal: "5.13 ETH",
+        progress: 45,
+        attachments: [true, false, true, true, false],
+        dateCreated: "19th Dec, 2024",
+        expirationDate: "09th Jan, 2025"
+    },
+    {
+        id: 8,
+        projectName: "Venture Capitalist",
+        imageIcon: "venture.png",
+        blockchain: "Polygon",
+        owner: "Cecilia Pozo",
+        goal: "3.59 POL",
+        progress: 35,
+        attachments: [false, true, true, true, false],
+        dateCreated: "17th Dec, 2024",
+        expirationDate: "07th Jan, 2025"
+    },
+    {
+        id: 9,
+        projectName: "Tracking on the Go",
+        imageIcon: "tracking on the go.png",
+        blockchain: "Hedera",
+        owner: "Matilda Evans",
+        goal: "1.45 HBAR",
+        progress: 60,
+        attachments: [false, true, true, true, true],
+        dateCreated: "15th Dec, 2024",
+        expirationDate: "05th Jan, 2025"
+    },
+    {
+        id: 10,
+        projectName: "Behind One of...",
+        imageIcon: "behind.png",
+        blockchain: "Algorand",
+        owner: "Maeng Yeo-Jin",
+        goal: "14.15 ALGO",
+        progress: 80,
+        attachments: [true, false, false, true, false],
+        dateCreated: "13th Dec, 2024",
+        expirationDate: "03rd Jan, 2025"
     }
-    ];
+];
 
+const Donor01A: React.FC<{}> = () => {
+    setSideNumber(1);
+    return (
+        <div className="donor-00A">
+            <HeaderBar />
+            <div className="barpage">
+                <DonorSideBar />
+                <ProjectDashboard />
+            </div>
+            <Footer />
+        </div>
+    );
+}
+
+const ProjectDashboard: React.FC<{}> = () => {
+    return (
+    <div className="project-dashboard">
+        <section>
+            <p>Donor - Home &gt; PROJECTS DASHBOARD</p>
+            <h1>Projects Dashboard</h1>
+            <p>
+                Here, you can see active projects displayed in a comprehensive list...
+            </p>
+            <div className="pd-tables">
+                <div className="table-header">
+                    <div className="table-rows">
+                        <div className="cell"><p>Project Title</p></div>
+                        <div className="cell"><p>Blockchain</p></div>
+                        <div className="cell"><p>Project Owner</p></div>
+                        <div className="cell"><p>Funding Goal</p></div>
+                        <div className="cell"><p>Funding Progress</p></div>
+                        <div className="cell"><p>Attachments</p></div>
+                        <div className="cell"><p>Date Created</p></div>
+                        <div className="cell"><p>Expiration Date</p></div>
+                    </div>
+                </div>
+                <Projects />
+            </div>
+            <ProjectNavigation />
+        </section>
+    </div>
+    );
+}
+
+const Projects: React.FC<{}> = () => {
     const tableElements = tableList.map((item) => (
         <div className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
@@ -137,5 +195,49 @@ const Projects: React.FC<{}> = () => {
     );
 }
 
+const ProjectNavigation: React.FC<{}> = () => {
+    const [current, setCurrent] = useState(1);
+    const [amountShown, setAmountShown] = useState(10);
+    const [begin, setBegin] = useState(1);
+
+    return (
+        <div className="project-navigation">
+            <div className="quick-selection">
+                <button className="project-left">
+                    <div className="left-horizontal-arrow">
+                        <img src="/right-arrow.svg" alt="arrow" />
+                        <img src="/right-arrow.svg" alt="arrow" />
+                    </div>
+                </button>
+                <button className="project-left small-button">
+                    <div className="left-horizontal-arrow">
+                        <img src="/right-arrow.svg" alt="arrow" />
+                    </div>
+                </button>
+                <div className="central-buttons">
+                    <button onClick={() => setCurrent(1)} className={current === 1 ? "selected" : "unselected"}>1</button>
+                    <button onClick={() => setCurrent(2)} className={current === 2 ? "selected" : "unselected"}>2</button>
+                    <button onClick={() => setCurrent(3)} className={current === 3 ? "selected" : "unselected"}>3</button>
+                    <button onClick={() => setCurrent(4)} className={current === 4 ? "selected" : "unselected"}>4</button>
+                    <button onClick={() => setCurrent(5)} className={current === 5 ? "selected" : "unselected"}>5</button>
+                </div>
+                <button className="project-right small-button">
+                    <img src="/right-arrow.svg" alt="arrow" />
+                </button>
+                <button className="project-right">
+                    <img src="/right-arrow.svg" alt="arrow" />
+                    <img src="/right-arrow.svg" alt="arrow" />
+                </button>
+            </div>
+            <div className="amount-selection">
+                <p>Showing {begin} to {begin + amountShown - 1} of {tableList.length} | Item Per Page: </p>
+                <button className="num-items-to-show">
+                    {amountShown}
+                    <div className="downarrow"><img src="down arrow.svg" alt="down arrow" /></div>
+                </button>
+            </div>
+        </div>
+    );
+}
 
 export default Donor01A;

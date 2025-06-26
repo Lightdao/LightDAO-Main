@@ -164,7 +164,7 @@ const DonorDashboard: React.FC<{}> = () => {
     return (
     <div className="dashboard">
         <section>
-            <p>Donor - Home &gt; Dashboard</p>
+            <p>Donor - Home &gt; DASHBOARD</p>
             <h1>Dashboard</h1>
             <p>
                 Here, you can see quick stats on your 

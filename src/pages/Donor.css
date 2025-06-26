@@ -153,7 +153,7 @@ button:hover {
     gap: 100px;
 }
 
-.dashboard {
+.dashboard, .project-dashboard {
     width: 100%;
 }
 
@@ -553,8 +553,12 @@ footer div h6 {
     border-radius: 50%;
 }
 
-.side-bar .selected {
+.selected {
     background-color: #7A52F4;
+    color: #FFFFFF;
+}
+
+.side-bar .selected {
     color: #FFFFFF;
 }
 
@@ -564,3 +568,67 @@ footer div h6 {
 
 /*project navigation*/
 
+.project-navigation {
+    display: flex;
+    justify-content: space-between;
+    width: 1400px;
+    margin-bottom: 200px;
+}
+
+.project-navigation .quick-selection button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.project-navigation .quick-selection .selected {
+    background-color: #7A52F4;
+}
+
+.project-navigation .quick-selection .unselected {
+    background-color: #FFFFFF;
+}
+
+.quick-selection .project-left, .project-right {
+    background-color: #CFDBD5;
+}
+
+.project-navigation .quick-selection .small-button {
+    width: 30px;
+    height: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.central-buttons {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.quick-selection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amount-selection {
+    display: flex;
+}
+
+.amount-selection p {
+    margin-right: 20px;
+}
+
+.num-items-to-show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #7A52F4;
+    color: #FFFFFF;
+}
+
+.left-horizontal-arrow {
+    transform: rotate(180deg);
+}

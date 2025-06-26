@@ -1,5 +1,3 @@
-import { buildQueries } from "@testing-library/react";
-
 export const HeaderBar: React.FC<{}> = () => {
     let username = "Seraph M.";
     return (
