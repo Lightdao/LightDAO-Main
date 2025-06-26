@@ -360,9 +360,26 @@ button:hover {
     border-radius: 20px;
     border: 2px solid #EBF0F0;
     margin-bottom: 10px;
+    background-color: #FFFFFF;
 }
 
-.tables {
+.tables .table-body .table-rows:hover {
+    background-color: #7A52F4;
+}
+
+.tables .table-body .table-rows:hover p {
+    color: #FFFFFF;
+}
+
+.pd-tables .table-body .table-rows:hover {
+    background-color: #7A52F4;
+}
+
+.pd-tables .table-body .table-rows:hover p {
+    color: #FFFFFF;
+}
+
+.tables, .activity-table{
     padding-bottom: 15px;
     width: 1250px;
 }
@@ -376,6 +393,8 @@ button:hover {
     display: flex;
     flex-flow: row nowrap;
     padding-right: 10px;
+    margin: 0;
+    width: 100%;
 }
 
 .cell, .tall-cell, .activity-cell {

@@ -80,7 +80,7 @@ const RecommendedProjects: React.FC<{}> = () => {
     ];
 
     const tableElements = tableList.map((item) => (
-        <div className="table-rows" key={item.id}>
+        <button className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
@@ -92,7 +92,7 @@ const RecommendedProjects: React.FC<{}> = () => {
                 </div>
             </div>
             <div className="cell"><p>{item.dateCreated}</p></div>
-        </div>));
+        </button>));
     return (
         <div className="table-body">{tableElements}</div>
     );
@@ -148,13 +148,13 @@ const ActivityFeed: React.FC<{}> = () => {
     ];
 
     const tableElements = tableList.map((item) => (
-        <div className="table-rows activity-table" key={item.id}>
+        <button className="table-rows" key={item.id}>
             <div className="activity-cell"><p><img src={item.activity} alt="" /></p></div>
             <div className="tall-cell"><p>{item.activitytitle}</p></div>
             <div className="tall-cell"><p>{item.description}</p></div>
             <div className="activity-cell"><p>{item.datetime}</p></div>
             <div className="activity-cell"><div className="download-opentab"><button><img src={item.openNewTab ? "/open_new_tab.svg" : ""} alt="" /></button> <button><img src={item.download ? "/download.svg" : ""} alt="" /></button></div></div>
-        </div>));
+        </button>));
     return (
         <div className="table-body">{tableElements}</div>
     );
@@ -241,9 +241,9 @@ const DonorDashboard: React.FC<{}> = () => {
         <section>
             <h2>Activity Feed</h2>
             <p>Shows a list of recent activities surrounding donations, projects, and NFT receipts</p>
-            <div className="tables">
+            <div className="activity-table">
                 <div className="table-header activity-table-header">
-                    <div className="table-rows activity-table">
+                    <div className="table-rows">
                         <div className="activity-cell"><p>Activity</p></div>
                         <div className="activity-cell"><p>Activity Title</p></div>
                         <div className="activity-cell"><p>Description</p></div>

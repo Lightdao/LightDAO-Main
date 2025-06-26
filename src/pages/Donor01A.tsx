@@ -176,7 +176,7 @@ const ProjectDashboard: React.FC<{}> = () => {
 
 const Projects: React.FC<{}> = () => {
     const tableElements = tableList.map((item) => (
-        <div className="table-rows" key={item.id}>
+        <button className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
@@ -189,7 +189,7 @@ const Projects: React.FC<{}> = () => {
             </div>
             <div className="cell"><p>{item.dateCreated}</p></div>
             <div className="cell"><p>{item.expirationDate}</p></div>
-        </div>));
+        </button>));
     return (
         <div className="table-body">{tableElements}</div>
     );
