@@ -202,19 +202,7 @@ button:hover {
     background-color: #6bbb6f7a;
 }
 
-.cards div:nth-child(1) .title {
-    color: #38923b;
-}
-
-.cards div:nth-child(1) h2 {
-    color: #38923b;
-}
-
-.cards div:nth-child(1) a {
-    color: #38923b;
-}
-
-.cards div:nth-child(1) span {
+.green-text {
     color: #38923b;
 }
 
@@ -222,19 +210,7 @@ button:hover {
     background-color: #42a4f57d;
 }
 
-.cards div:nth-child(2) .title {
-    color: #2982ca;
-}
-
-.cards div:nth-child(2) h2 {
-    color: #2982ca;
-}
-
-.cards div:nth-child(2) a {
-    color: #2982ca;
-}
-
-.cards div:nth-child(2) span {
+.blue-text {
     color: #2982ca;
 }
 
@@ -242,19 +218,7 @@ button:hover {
     background-color: #ffbb0082;
 }
 
-.cards div:nth-child(3) .title {
-    color: #997000;
-}
-
-.cards div:nth-child(3) h2 {
-    color: #997000;
-}
-
-.cards div:nth-child(3) a {
-    color: #997000;
-}
-
-.cards div:nth-child(3) span {
+.yellow-text {
     color: #997000;
 }
 
@@ -262,19 +226,7 @@ button:hover {
     background-color: #9b27b050;
 }
 
-.cards div:nth-child(4) .title {
-    color: #9C27B0;
-}
-
-.cards div:nth-child(4) h2 {
-    color: #9C27B0;
-}
-
-.cards div:nth-child(4) a {
-    color: #9C27B0;
-}
-
-.cards div:nth-child(4) span {
+.purple-text {
     color: #9C27B0;
 }
 
@@ -282,19 +234,7 @@ button:hover {
     background-color: #e91e624a;
 }
 
-.cards div:nth-child(5) .title {
-    color: #E91E63;
-}
-
-.cards div:nth-child(5) h2 {
-    color: #E91E63;
-}
-
-.cards div:nth-child(5) a {
-    color: #E91E63;
-}
-
-.cards div:nth-child(5) span {
+.pink-text {
     color: #E91E63;
 }
 
@@ -302,19 +242,7 @@ button:hover {
     background-color: #ff56224d;
 }
 
-.cards div:nth-child(6) .title {
-    color: #FF5722;
-}
-
-.cards div:nth-child(6) h2 {
-    color: #FF5722;
-}
-
-.cards div:nth-child(6) a {
-    color: #FF5722;
-}
-
-.cards div:nth-child(6) span {
+.orange-text {
     color: #FF5722;
 }
 
@@ -322,19 +250,7 @@ button:hover {
     background-color: #4dafff49;
 }
 
-.cards div:nth-child(7) .title {
-    color: #002D80;
-}
-
-.cards div:nth-child(7) h2 {
-    color: #002D80;
-}
-
-.cards div:nth-child(7) a {
-    color: #002D80;
-}
-
-.cards div:nth-child(7) span {
+.dark-blue-text {
     color: #002D80;
 }
 
