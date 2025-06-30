@@ -130,21 +130,34 @@ let tableList = [
     }
 ];
 
+interface ProjectFunction {
+    projectButtonClick: (index: number) => void;
+}
+
 const Donor01A: React.FC<{}> = () => {
+    const [ProjectSelected, setProjectSelected] = useState(false);
+    const [projectIndex, setProjectIndex] = useState(0);
+    
+    function projectButtonClick(index: number)
+    {
+        setProjectSelected(true);
+        setProjectIndex(index);
+    }
+
     setSideNumber(1);
     return (
         <div className="donor-00A">
             <HeaderBar />
             <div className="barpage">
                 <DonorSideBar />
-                <ProjectDashboard />
+                {ProjectSelected ? <SpecificProject projectData={tableList[projectIndex]}/> : <ProjectDashboard projectButtonClick={projectButtonClick}/>}
             </div>
             <Footer />
         </div>
     );
 }
 
-const ProjectDashboard: React.FC<{}> = () => {
+const ProjectDashboard: React.FC<ProjectFunction> = ({projectButtonClick}) => {
     return (
     <div className="project-dashboard">
         <section>
@@ -166,7 +179,7 @@ const ProjectDashboard: React.FC<{}> = () => {
                         <div className="cell"><p>Expiration Date</p></div>
                     </div>
                 </div>
-                <Projects />
+                <Projects projectButtonClick={projectButtonClick}/>
             </div>
             <ProjectNavigation />
         </section>
@@ -174,9 +187,9 @@ const ProjectDashboard: React.FC<{}> = () => {
     );
 }
 
-const Projects: React.FC<{}> = () => {
-    const tableElements = tableList.map((item) => (
-        <button className="table-rows" key={item.id}>
+const Projects: React.FC<ProjectFunction> = ({projectButtonClick}) => {
+    const tableElements = tableList.map((item, index) => (
+        <button onClick={() => projectButtonClick(index)} className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
@@ -236,6 +249,43 @@ const ProjectNavigation: React.FC<{}> = () => {
                     <div className="downarrow"><img src="down arrow.svg" alt="down arrow" /></div>
                 </button>
             </div>
+        </div>
+    );
+}
+
+interface ProjectJsonLayout {
+    id: number,
+    projectName: string,
+    imageIcon: string,
+    blockchain: string,
+    owner: string,
+    goal: string,
+    progress: number,
+    attachments: boolean[],
+    dateCreated: string,
+    expirationDate: string
+}
+
+interface ProjectDetails {
+    projectData: ProjectJsonLayout;
+}
+
+const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
+    return (
+        <div className="project-dashboard">
+            <section>
+                <p>Donor - Home &gt; PROJECTS DASHBOARD &gt; {projectData.projectName.toUpperCase()} DETAILS</p>
+                <h1>{projectData.projectName}</h1>
+                <p>
+                    By <span>{projectData.owner}</span> Creation Date: <span>{projectData.dateCreated}</span> Expiration Date: <span>{projectData.expirationDate}</span>
+                </p>
+                <div>
+                    <p>Funding Goal: $200</p>
+                    <div></div>
+                    <p>Funding Goal: {projectData.progress}%</p>
+                    <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: projectData.progress}}></div></div></div>
+                </div>
+            </section>
         </div>
     );
 }
