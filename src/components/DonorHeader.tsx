@@ -8,7 +8,7 @@ export const HeaderBar: React.FC<{}> = () => {
             <div className="user-stuff">
                 <button className="moon"><img src="/dark_mode.svg" alt="moon" /></button>
                 <NotificationBell />
-                <div className="profile">
+                <div className="profile rounded-purple-button">
                     <div className="profile-picture">
                         <img src="main profile.png" alt="profile picture" />
                     </div>

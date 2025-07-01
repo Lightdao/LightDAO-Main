@@ -2,10 +2,12 @@
     font-family: 'Inter', sans-serif;
     background-color: #ffffff;
     width: 100%;
-    min-width: 1440px;
+    min-width: 1500px;
     margin: 0 auto;
     padding: 0;
 }
+
+/*general styles*/
 
 h1 {
     font-size: 42px;
@@ -37,6 +39,18 @@ hr {
   margin: 20px 10px;
   width: 90%;
 }
+
+p {
+    color: #5D5D5B;
+}
+
+.rounded-purple-button {
+    border-radius: 999px;
+    background-color: #7A52F4;
+    color: #FFFFFF;
+}
+
+/*donor header bar*/
 
 .logo {
   font-weight: bold;
@@ -96,8 +110,6 @@ hr {
 .profile {
     width: 160px;
     height: 50px;
-    border-radius: 50px;
-    background-color: #7A52F4;
     display: flex;
     align-items: center;
     padding-left: 5px;
@@ -135,10 +147,6 @@ header {
     align-items: center;
     height: 75px;
     box-shadow: 0 3px 4px rgba(153, 155, 168, 0.25);
-}
-
-p {
-    color: #5D5D5B;
 }
 
 button:hover {
@@ -458,6 +466,7 @@ footer div h6 {
 }
 
 /*side bar*/
+
 .side-bar {
     width: 100%;
 }
@@ -566,4 +575,24 @@ footer div h6 {
 
 .left-horizontal-arrow {
     transform: rotate(180deg);
+}
+
+/*Individual Project Information*/
+
+.project-info {
+    font-weight: bold;
+}
+
+.project-funding {
+    display: flex;
+    align-items: center;
+}
+
+.project-data {
+    display: flex;
+}
+
+.project-description {
+    border: 1px solid #000;
+    border-radius: 12px;
 }

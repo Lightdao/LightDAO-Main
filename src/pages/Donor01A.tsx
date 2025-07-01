@@ -276,14 +276,123 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
             <section>
                 <p>Donor - Home &gt; PROJECTS DASHBOARD &gt; {projectData.projectName.toUpperCase()} DETAILS</p>
                 <h1>{projectData.projectName}</h1>
-                <p>
-                    By <span>{projectData.owner}</span> Creation Date: <span>{projectData.dateCreated}</span> Expiration Date: <span>{projectData.expirationDate}</span>
-                </p>
+                <div className="project-data">
+                    <div>
+                        <p>
+                            By <span className="project-info">{projectData.owner}</span> Creation Date: <span className="project-info">{projectData.dateCreated}</span> Expiration Date: <span className="project-info">{projectData.expirationDate}</span>
+                        </p>
+                        <div className="project-funding">
+                            <p>Funding Goal: $200</p>
+                            <div></div>
+                            <p>Funding Goal: {projectData.progress}%</p>
+                            <div className="progress-bar"><div className="progress-made" style={{width: projectData.progress}}></div></div>
+                        </div>
+                        <p>Category:</p>
+                    </div>
+                    <img src={projectData.imageIcon} alt="project image icon" />
+                </div>
+                <h6>Project Description</h6>
+                <div className="project-description">
+                    <h5>Overview</h5>
+                    <p>
+                        "Tracking On The Go" is a cutting-edge mobile application designed to 
+                        revolutionize how individuals monitor and manage their health. 
+                        In today's fast-paced world, keeping track of calorie intake and 
+                        burn rate can be a challenge. This app empowers users to take control 
+                        of their fitness journey by providing an intuitive, user-friendly platform 
+                        for tracking and analyzing their daily calorie metrics.
+                    </p>
+                    <h5>Purpose</h5>
+                    <p>
+                        The primary goal of this proposal is to develop an all-in-one calorie 
+                        tracking app that integrates seamlessly into the daily lives of users. 
+                        By leveraging modern technology, "Tracking On The Go" will enable users 
+                        to make informed decisions about their nutrition and activity levels, leading 
+                        to healthier lifestyles and better fitness outcomes.
+                    </p>
+                </div>
+                <h6>Attachments</h6>
+                <div className="attachment-names-row">
+
+                </div>
+            </section>
+            
+            <hr />
+
+            <section>
                 <div>
-                    <p>Funding Goal: $200</p>
-                    <div></div>
-                    <p>Funding Goal: {projectData.progress}%</p>
-                    <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: projectData.progress}}></div></div></div>
+                    <button>GO BACK</button>
+                    <div>
+                        <button>SHARE</button>
+                        <button>DONATE</button>
+                    </div>
+                </div>
+            </section>
+            
+            <hr />
+
+            <section>
+                <h6>Project Updates</h6>
+                <p>Timely updates and correspondence of the active project by the Project Owner...</p>
+                {/* may change this later */}
+                <div className="tables">
+                    <div className="table-body">
+                        <div className="table-rows">
+                            <img className="cell" src="" alt="" />
+                            <p className="cell">The prototype for the app is complete. Testing should begin next week</p>
+                            <p className="cell">08:30:39 | 27th Dec, 2024</p>
+                            <div className="cell">
+                                <p>15</p>
+                                <img src="" alt="" />
+                            </div>
+                            <img src="" alt="" />
+                        </div>
+                        <div className="table-rows">
+                            <img className="cell" src="" alt="" />
+                            <p className="cell">Fundraising has reached 70% of its target goal</p>
+                            <p className="cell">22:01:17 | 15th Dec, 2024</p>
+                            <div className="cell">
+                                <p>5</p>
+                                <img src="" alt="" />
+                            </div>
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <a href="">See more updates...</a>
+            </section>
+
+            <hr />
+
+            <section>
+                <h6>Donation Perks & Benefits</h6>
+                <p>Awesome gifts that accompany project donation...</p>
+                <div>
+                    <div>
+                        <div></div>
+                        <input type="checkbox" name="" id="" />
+                    </div>
+                    <img src="" alt="" />
+                    <div>
+                        <h6>Lion of Judah</h6>
+                        <p>Unlock with a donation of $50+</p>
+                        <div>
+                            <img src="" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr />
+
+            <section>
+                <h6>Project Owner History</h6>
+                <div>
+                    <img src="" alt="" />
+                    <p>Date Joined: <span>03rd May, 2024</span></p>
+                </div>
+                <div>
+                    
                 </div>
             </section>
         </div>
