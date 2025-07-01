@@ -586,13 +586,277 @@ footer div h6 {
 .project-funding {
     display: flex;
     align-items: center;
+    gap: 10px;
+}
+
+.project-funding .project-data-goal {
+    margin: 0;
 }
 
 .project-data {
     display: flex;
+    justify-content: space-between;
+}
+
+.project-data h1, .project-data h5, .project-data h6 {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .project-description {
     border: 1px solid #000;
     border-radius: 12px;
+    padding-left: 20px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+}
+
+.project-description h5 {
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.project-description p {
+    margin-bottom: 30px;
+    margin-top: 0px;
+    color: #000;
+}
+
+.project-data-goal {
+    background-color: #000;
+    color: #FFFFFF;
+}
+
+.project-image {
+    width: 150px;
+    height: 150px;
+}
+
+.specific-project {
+    width: 1000px;
+}
+
+.specific-project h6 {
+    margin: 20px 0;
+}
+
+.specific-project hr {
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.project-categories {
+    display: flex;
+    align-items: center;
+}
+
+.project-category {
+    background-color: #CFDBD5;
+    color: #000;
+}
+
+.round-corner-box {
+    border-radius: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+.attachment-names-row {
+    display: flex;
+}
+
+.project-action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.project-button p {
+    margin: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #FFFFFF;
+}
+
+.back-button {
+    background-color: #FFFFFF;
+    border: 1px solid #CFDBD5;
+}
+
+.back-button p {
+    color: #7A52F4;
+}
+
+.share-button {
+    background-color: #7A52F4;
+    width: 145px;
+}
+
+.donate-button {
+    background-color: #005934;
+    margin-left: 20px;
+}
+
+.see-update-link {
+    display: flex;
+    justify-content: flex-end;
+    color: #7A52F4;
+}
+
+.cell .purple-cell-text {
+    color: #7A52F4;
+    padding-right: 5px;
+}
+
+.right-turned-arrow {
+    transform: rotate(90deg);
+}
+
+.donation-perk-container {
+    border: 1px solid #CFDBD5;
+    width: 300px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.donation-perk-header {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.available-perk {
+    border-radius: 999px;
+    padding: 10px;
+    background-color: #7b52f43a;
+    color: #7A52F4;
+    font-weight: bold;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #7A52F4;
+}
+
+.perk-information h6 {
+    margin: 0;
+    margin-top: 20px;
+}
+
+.perk-owner, .owner-profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.perk-owner-info p, 
+.perk-owner-info h6,
+.owner-profile p {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.owner-profile h3 {
+    margin: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.project-history {
+    border: 1px solid #CFDBD5;
+    border-radius: 16px;
+    padding: 0;
+    margin-bottom: 50px;
+}
+
+.project-history-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px 18px 24px;
+    border-bottom: 1px solid #CFDBD5;
+}
+
+.tabs {
+    display: flex;
+    gap: 12px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #CFDBD5;
+    padding: 6px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.tab.active {
+    background: #7b52f469;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 15px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.period {
+    color: #CFDBD5;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.history-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+    padding: 10px 30px 0 0;
+}
+
+.icon-button {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #EBF0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-button img {
+    opacity: 0.25;
+}
+
+.project-history-body {
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0 30px 0;
+}
+
+.empty-message p {
+    text-align: center;
+    font-style: italic;
+    line-height: 1.7;
 }

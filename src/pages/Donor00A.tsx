@@ -2,7 +2,7 @@ import { DonorSideBar } from '../components/DonorSideBar';
 import { HeaderBar } from '../components/DonorHeader';
 import { Footer } from '../components/DonorFooter';
 import { setSideNumber } from '../components/DonorSideBar';
-import { GetAttachments } from '../components/DonorAttachments';
+import { GetAttachmentIcons } from '../components/DonorAttachments';
 import './Donor.css';
 
 const Donor00A: React.FC<{}> = () => {
@@ -28,6 +28,7 @@ const RecommendedProjects: React.FC<{}> = () => {
         imageIcon: "/election season.png",
         blockchain: "Solana",
         owner: "Ivan Morais",
+        ownerProfilePic: "profile.png",
         goal: "4.45 SOL",
         progress: 75,
         attachments: [false, true, true, true, true],
@@ -39,6 +40,7 @@ const RecommendedProjects: React.FC<{}> = () => {
         imageIcon: "/Lorr.png",
         blockchain: "Ethereum",
         owner: "Langke Zambo",
+        ownerProfilePic: "profile.png",
         goal: "5.13 ETH",
         progress: 45,
         attachments: [true, false, true, true, false],
@@ -50,6 +52,7 @@ const RecommendedProjects: React.FC<{}> = () => {
         imageIcon: "venture.png",
         blockchain: "Polygon",
         owner: "Cecilia Pozo",
+        ownerProfilePic: "profile.png",
         goal: "3.59 POL",
         progress: 35,
         attachments: [false, true, true, true, false],
@@ -61,6 +64,7 @@ const RecommendedProjects: React.FC<{}> = () => {
         imageIcon: "tracking on the go.png",
         blockchain: "Hedera",
         owner: "Matilda Evans",
+        ownerProfilePic: "Matilda Profile.png",
         goal: "1.45 HBAR",
         progress: 60,
         attachments: [false, true, true, true, true],
@@ -72,6 +76,7 @@ const RecommendedProjects: React.FC<{}> = () => {
         imageIcon: "behind.png",
         blockchain: "Algorand",
         owner: "Maeng Yeo-Jin",
+        ownerProfilePic: "profile.png",
         goal: "14.15 ALGO",
         progress: 80,
         attachments: [true, false, false, true, false],
@@ -83,12 +88,12 @@ const RecommendedProjects: React.FC<{}> = () => {
         <button className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
-            <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
+            <div className="cell"><div className="profile-icon"><img src={item.ownerProfilePic} alt="" /></div><p>{item.owner}</p></div>
             <div className="cell"><p>{item.goal}</p></div>
             <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: item.progress}}></div></div></div>
             <div className="cell">
                 <div className="attachment-row">
-                    {<GetAttachments array={item.attachments} />}
+                    {<GetAttachmentIcons array={item.attachments} />}
                 </div>
             </div>
             <div className="cell"><p>{item.dateCreated}</p></div>

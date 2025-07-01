@@ -3,10 +3,11 @@ import { DonorSideBar } from '../components/DonorSideBar';
 import { HeaderBar } from '../components/DonorHeader';
 import { Footer } from '../components/DonorFooter';
 import { setSideNumber } from '../components/DonorSideBar';
-import { GetAttachments } from '../components/DonorAttachments';
+import { GetAttachmentIcons } from '../components/DonorAttachments';
+import { ReturnAttachmentNames } from '../components/DonorAttachments';
 import './Donor.css';
 
-//for now this is global, when backend is implemented it will be removed
+//NOTE: for now this is global, when backend is implemented it will be removed
 let tableList = [
     {
         id: 1,
@@ -14,6 +15,7 @@ let tableList = [
         imageIcon: "/election season.png",
         blockchain: "Solana",
         owner: "Ivan Morais",
+        ownerProfilePic: "profile.png",
         goal: "4.45 SOL",
         progress: 75,
         attachments: [false, true, true, true, true],
@@ -26,6 +28,7 @@ let tableList = [
         imageIcon: "/Lorr.png",
         blockchain: "Ethereum",
         owner: "Langke Zambo",
+        ownerProfilePic: "profile.png",
         goal: "5.13 ETH",
         progress: 45,
         attachments: [true, false, true, true, false],
@@ -38,6 +41,7 @@ let tableList = [
         imageIcon: "venture.png",
         blockchain: "Polygon",
         owner: "Cecilia Pozo",
+        ownerProfilePic: "profile.png",
         goal: "3.59 POL",
         progress: 35,
         attachments: [false, true, true, true, false],
@@ -50,6 +54,7 @@ let tableList = [
         imageIcon: "tracking on the go.png",
         blockchain: "Hedera",
         owner: "Matilda Evans",
+        ownerProfilePic: "Matilda Profile.png",
         goal: "1.45 HBAR",
         progress: 60,
         attachments: [false, true, true, true, true],
@@ -62,6 +67,7 @@ let tableList = [
         imageIcon: "behind.png",
         blockchain: "Algorand",
         owner: "Maeng Yeo-Jin",
+        ownerProfilePic: "profile.png",
         goal: "14.15 ALGO",
         progress: 80,
         attachments: [true, false, false, true, false],
@@ -74,6 +80,7 @@ let tableList = [
         imageIcon: "/election season.png",
         blockchain: "Solana",
         owner: "Ivan Morais",
+        ownerProfilePic: "profile.png",
         goal: "4.45 SOL",
         progress: 75,
         attachments: [false, true, true, true, true],
@@ -86,6 +93,7 @@ let tableList = [
         imageIcon: "/Lorr.png",
         blockchain: "Ethereum",
         owner: "Langke Zambo",
+        ownerProfilePic: "profile.png",
         goal: "5.13 ETH",
         progress: 45,
         attachments: [true, false, true, true, false],
@@ -98,6 +106,7 @@ let tableList = [
         imageIcon: "venture.png",
         blockchain: "Polygon",
         owner: "Cecilia Pozo",
+        ownerProfilePic: "profile.png",
         goal: "3.59 POL",
         progress: 35,
         attachments: [false, true, true, true, false],
@@ -110,6 +119,7 @@ let tableList = [
         imageIcon: "tracking on the go.png",
         blockchain: "Hedera",
         owner: "Matilda Evans",
+        ownerProfilePic: "Matilda Profile.png",
         goal: "1.45 HBAR",
         progress: 60,
         attachments: [false, true, true, true, true],
@@ -122,6 +132,7 @@ let tableList = [
         imageIcon: "behind.png",
         blockchain: "Algorand",
         owner: "Maeng Yeo-Jin",
+        ownerProfilePic: "profile.png",
         goal: "14.15 ALGO",
         progress: 80,
         attachments: [true, false, false, true, false],
@@ -192,12 +203,12 @@ const Projects: React.FC<ProjectFunction> = ({projectButtonClick}) => {
         <button onClick={() => projectButtonClick(index)} className="table-rows" key={item.id}>
             <div className="cell"><div className="table-img"><img src={item.imageIcon} alt="" /></div><p>{item.projectName}</p></div>
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
-            <div className="cell"><div className="profile-icon"><img src="profile.png" alt="" /></div><p>{item.owner}</p></div>
+            <div className="cell"><div className="profile-icon"><img src={item.ownerProfilePic} alt="" /></div><p>{item.owner}</p></div>
             <div className="cell"><p>{item.goal}</p></div>
             <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: item.progress}}></div></div></div>
             <div className="cell">
                 <div className="attachment-row">
-                    {<GetAttachments array={item.attachments} />}
+                    {<GetAttachmentIcons array={item.attachments} />}
                 </div>
             </div>
             <div className="cell"><p>{item.dateCreated}</p></div>
@@ -259,6 +270,7 @@ interface ProjectJsonLayout {
     imageIcon: string,
     blockchain: string,
     owner: string,
+    ownerProfilePic: string,
     goal: string,
     progress: number,
     attachments: boolean[],
@@ -272,24 +284,27 @@ interface ProjectDetails {
 
 const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
     return (
-        <div className="project-dashboard">
+        <div className="project-dashboard specific-project">
             <section>
                 <p>Donor - Home &gt; PROJECTS DASHBOARD &gt; {projectData.projectName.toUpperCase()} DETAILS</p>
-                <h1>{projectData.projectName}</h1>
                 <div className="project-data">
                     <div>
+                        <h1>{projectData.projectName}</h1>
                         <p>
                             By <span className="project-info">{projectData.owner}</span> Creation Date: <span className="project-info">{projectData.dateCreated}</span> Expiration Date: <span className="project-info">{projectData.expirationDate}</span>
                         </p>
                         <div className="project-funding">
                             <p>Funding Goal: $200</p>
-                            <div></div>
+                            <div className="project-data-goal round-corner-box">{projectData.goal}</div>
                             <p>Funding Goal: {projectData.progress}%</p>
                             <div className="progress-bar"><div className="progress-made" style={{width: projectData.progress}}></div></div>
                         </div>
-                        <p>Category:</p>
+                        <div className="project-categories">
+                            <p>Category: </p>
+                            <div className="project-category round-corner-box">Mobile App</div>
+                        </div>
                     </div>
-                    <img src={projectData.imageIcon} alt="project image icon" />
+                    <img className="project-image" src={projectData.imageIcon} alt="project image icon" />
                 </div>
                 <h6>Project Description</h6>
                 <div className="project-description">
@@ -313,18 +328,18 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
                 </div>
                 <h6>Attachments</h6>
                 <div className="attachment-names-row">
-
+                    <ReturnAttachmentNames array={projectData.attachments} projectName={projectData.projectName}/>
                 </div>
             </section>
             
             <hr />
 
             <section>
-                <div>
-                    <button>GO BACK</button>
-                    <div>
-                        <button>SHARE</button>
-                        <button>DONATE</button>
+                <div className="project-action-buttons">
+                    <button className="back-button project-button"><img src="/Back Icon.svg" alt="back icon" /><p>GO BACK</p></button>
+                    <div className="project-action-buttons">
+                        <button className="share-button project-button"><p>SHARE</p><img src="/Share Icon.svg" alt="share arrow" /></button>
+                        <button className="donate-button project-button"><p>DONATE NOW</p><img src="/Donate Icon.svg" alt="donate icon" /></button>
                     </div>
                 </div>
             </section>
@@ -334,32 +349,39 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
             <section>
                 <h6>Project Updates</h6>
                 <p>Timely updates and correspondence of the active project by the Project Owner...</p>
-                {/* may change this later */}
-                <div className="tables">
+                <div className="history-table">
                     <div className="table-body">
                         <div className="table-rows">
-                            <img className="cell" src="" alt="" />
+                            <div className="cell">
+                                <img src="/Project Update Icon.svg" alt="update icon" />
+                            </div>
                             <p className="cell">The prototype for the app is complete. Testing should begin next week</p>
                             <p className="cell">08:30:39 | 27th Dec, 2024</p>
                             <div className="cell">
-                                <p>15</p>
-                                <img src="" alt="" />
+                                <p className="purple-cell-text">15</p>
+                                <img src="/Update Comments Icon.svg" alt="update comments icon" />
                             </div>
-                            <img src="" alt="" />
+                            <div className="cell">
+                                <img className="right-turned-arrow" src="/right-arrow.svg" alt="down arrow" />
+                            </div>
                         </div>
                         <div className="table-rows">
-                            <img className="cell" src="" alt="" />
+                            <div className="cell">
+                                <img src="/Project Update Icon.svg" alt="" />
+                            </div>
                             <p className="cell">Fundraising has reached 70% of its target goal</p>
                             <p className="cell">22:01:17 | 15th Dec, 2024</p>
                             <div className="cell">
-                                <p>5</p>
-                                <img src="" alt="" />
+                                <p className="purple-cell-text">5</p>
+                                <img src="/Update Comments Icon.svg" alt="" />
                             </div>
-                            <img src="" alt="" />
+                            <div className="cell">
+                                <img className="right-turned-arrow" src="/right-arrow.svg" alt="down arrow" />
+                            </div>
                         </div>
                     </div>
                 </div>
-                <a href="">See more updates...</a>
+                <a className="see-update-link" href="">See more updates...</a>
             </section>
 
             <hr />
@@ -367,34 +389,68 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
             <section>
                 <h6>Donation Perks & Benefits</h6>
                 <p>Awesome gifts that accompany project donation...</p>
-                <div>
-                    <div>
-                        <div></div>
-                        <input type="checkbox" name="" id="" />
-                    </div>
-                    <img src="" alt="" />
-                    <div>
-                        <h6>Lion of Judah</h6>
-                        <p>Unlock with a donation of $50+</p>
-                        <div>
-                            <img src="" alt="" />
-                        </div>
-                    </div>
-                </div>
+                <DonationPerk projectData={projectData} />
             </section>
 
             <hr />
 
             <section>
                 <h6>Project Owner History</h6>
-                <div>
-                    <img src="" alt="" />
-                    <p>Date Joined: <span>03rd May, 2024</span></p>
+                <div className="owner-profile">
+                    <img src={projectData.ownerProfilePic} alt="owner profile picture" />
+                    <div>
+                        <h3>{projectData.owner}</h3>
+                        <p>Date Joined: <span className="project-info">03rd May, 2024</span></p>
+                    </div>
                 </div>
-                <div>
-                    
+                <div className="project-history">
+                    <div className="project-history-header">
+                        <div className="tabs">
+                            <button className="tab active">Past Proposals</button>
+                            <button className="tab">Past Projects</button>
+                            <button className="tab">Performance History</button>
+                        </div>
+                        <div className="header-right">
+                            <span className="period">Day</span>
+                            <span className="period">Week</span>
+                            <span className="period">Month</span>
+                        </div>
+                    </div>
+                    <div className="history-buttons">
+                        <button className="icon-button"><img src="Chart Icon.svg" alt="icon1" /></button>
+                        <button className="icon-button"><img src="Graph Icon.svg" alt="icon2" /></button>
+                    </div>
+                    <div className="project-history-body">
+                        <div className="empty-message">
+                            <p>This project owner does<br />not have any past<br />projects</p>
+                        </div>
+                    </div>
                 </div>
             </section>
+        </div>
+    );
+}
+
+const DonationPerk: React.FC<ProjectDetails> = ({projectData}) => {
+    
+    return (
+        <div className="donation-perk-container">
+            <div className="donation-perk-header">
+                <div className="available-perk">Available Now!</div>
+                <input type="checkbox" name="" id="" />
+            </div>
+            <img src="Lion.png" alt="lion" width={250} height={250}/>
+            <div className="perk-information">
+                <h6>Lion of Judah</h6>
+                <p>Unlock with a donation of $50+</p>
+                <div className="perk-owner">
+                    <img className="profile-picture" src={projectData.ownerProfilePic} alt="project owner picture" />
+                    <div className="perk-owner-info">
+                        <h6>{projectData.owner}</h6>
+                        <p>Digital Artist</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }

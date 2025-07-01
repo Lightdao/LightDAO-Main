@@ -1,4 +1,4 @@
-//temporary solution
+//NOTE: temporary solution, eventually will use props and useState for this
 export let sideNumber: number = 0;
 
 export function setSideNumber(newValue: number) {
