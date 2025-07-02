@@ -427,6 +427,9 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
                     </div>
                 </div>
             </section>
+
+            {/* NOTE: for now placed here until I implement button logic to display it */}
+            <DonationPopup projectData={projectData} />
         </div>
     );
 }
@@ -451,6 +454,77 @@ const DonationPerk: React.FC<ProjectDetails> = ({projectData}) => {
                     </div>
                 </div>
             </div>
+        </div>
+    );
+}
+
+const DonationPopup: React.FC<ProjectDetails> = ({projectData}) => {
+    return (
+        <>
+            <div className="donation-popup"></div>
+            
+            <div className="donation-popup-window">
+                <div className="close-donation-popup">
+                    <button className="close-button">
+                        <p>CLOSE</p>
+                        <img src="/Close Icon.svg" alt="close button" />
+                    </button>
+                </div>
+
+                <div className="donation-content-container">
+                    <div className="donation-content">
+                    <div>
+                        <h1 className="center-text">PROJECT DONATION</h1>
+                        <p className="donation-form-text center-text">Use the form below to make your donation to the <br /> <span>{projectData.projectName}</span> <br /> project</p>
+                    </div>
+                    <div className="donation-amounts">
+                        <input className="donation-amount-bar" type="number" name="" id=""  placeholder="Donation Amount" />
+                        <div className="donation-squares">
+                            <DonationSquare amount={1} />
+                            <DonationSquare amount={2} />
+                            <DonationSquare amount={5} />
+                            <DonationSquare amount={10} />
+                            <DonationSquare amount={20} />
+                            <DonationSquare amount={25} />
+                            <DonationSquare amount={50} />
+                            <DonationSquare amount={100} />
+                            <DonationSquare amount={150} />
+                            <DonationSquare amount={200} />
+                            <DonationSquare amount={250} />
+                            <DonationSquare amount={500} />
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <p>Payment Methods</p>
+                    <div className="payment-acceptance-container">
+                        <div className="payment-acceptance">MASTER CARD</div>
+                        <div className="payment-acceptance">VISA</div>
+                        <div className="payment-acceptance">BINANCE</div>
+                        <div className="payment-acceptance">TRUST</div>
+                    </div>
+
+                    <hr />
+
+                    <div className="donation-button-popup">
+                        <button className="donate-button project-button"><p>DONATE NOW!</p><img src="/Donate Icon.svg" alt="donate icon" /></button>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+}
+
+interface DonationAmount {
+    amount: number;
+}
+
+const DonationSquare: React.FC<DonationAmount> = ({amount}) => {
+    return (
+        <div className="square">
+            <h2>${amount}</h2>
         </div>
     );
 }
