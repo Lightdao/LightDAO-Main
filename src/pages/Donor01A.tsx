@@ -282,7 +282,25 @@ interface ProjectDetails {
     projectData: ProjectJsonLayout;
 }
 
+interface CloseWindow {
+    closeWindow: () => void;
+}
+
+type PopupWindowProps = ProjectDetails & CloseWindow;
+
 const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
+    const [openDonateWindow, setOpenDonateWindow] = useState(false);
+
+    function openWindow()
+    {
+        setOpenDonateWindow(true);
+    }
+
+    function closeWindow()
+    {
+        setOpenDonateWindow(false);
+    }
+
     return (
         <div className="project-dashboard specific-project">
             <section>
@@ -339,7 +357,7 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
                     <button className="back-button project-button"><img src="/Back Icon.svg" alt="back icon" /><p>GO BACK</p></button>
                     <div className="project-action-buttons">
                         <button className="share-button project-button"><p>SHARE</p><img src="/Share Icon.svg" alt="share arrow" /></button>
-                        <button className="donate-button project-button"><p>DONATE NOW</p><img src="/Donate Icon.svg" alt="donate icon" /></button>
+                        <button onClick={openWindow} className="donate-button project-button"><p>DONATE NOW</p><img src="/Donate Icon.svg" alt="donate icon" /></button>
                     </div>
                 </div>
             </section>
@@ -428,8 +446,7 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
                 </div>
             </section>
 
-            {/* NOTE: for now placed here until I implement button logic to display it */}
-            <DonationPopup projectData={projectData} />
+            {openDonateWindow ? <DonationPopup projectData={projectData} closeWindow={closeWindow} /> : <></>}
         </div>
     );
 }
@@ -458,14 +475,14 @@ const DonationPerk: React.FC<ProjectDetails> = ({projectData}) => {
     );
 }
 
-const DonationPopup: React.FC<ProjectDetails> = ({projectData}) => {
+const DonationPopup: React.FC<PopupWindowProps> = ({projectData, closeWindow}) => {
     return (
         <>
             <div className="donation-popup"></div>
             
             <div className="donation-popup-window">
                 <div className="close-donation-popup">
-                    <button className="close-button">
+                    <button onClick={closeWindow} className="close-button">
                         <p>CLOSE</p>
                         <img src="/Close Icon.svg" alt="close button" />
                     </button>
