@@ -141,10 +141,6 @@ let tableList = [
     }
 ];
 
-interface ProjectFunction {
-    projectButtonClick: (index: number) => void;
-}
-
 const Donor01A: React.FC<{}> = () => {
     const [ProjectSelected, setProjectSelected] = useState(false);
     const [projectIndex, setProjectIndex] = useState(0);
@@ -155,17 +151,26 @@ const Donor01A: React.FC<{}> = () => {
         setProjectIndex(index);
     }
 
+    function goBack()
+    {
+        setProjectSelected(false);
+    }
+
     setSideNumber(1);
     return (
         <div className="donor-00A">
             <HeaderBar />
             <div className="barpage">
                 <DonorSideBar />
-                {ProjectSelected ? <SpecificProject projectData={tableList[projectIndex]}/> : <ProjectDashboard projectButtonClick={projectButtonClick}/>}
+                {ProjectSelected ? <SpecificProject goBack={goBack} projectData={tableList[projectIndex]}/> : <ProjectDashboard projectButtonClick={projectButtonClick}/>}
             </div>
             <Footer />
         </div>
     );
+}
+
+interface ProjectFunction {
+    projectButtonClick: (index: number) => void;
 }
 
 const ProjectDashboard: React.FC<ProjectFunction> = ({projectButtonClick}) => {
@@ -286,9 +291,13 @@ interface CloseWindow {
     closeWindow: () => void;
 }
 
-type PopupWindowProps = ProjectDetails & CloseWindow;
+interface GoBackProp {
+    goBack: () => void;
+}
 
-const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
+type SpecificProjectProps = GoBackProp & ProjectDetails;
+
+const SpecificProject: React.FC<SpecificProjectProps> = ({goBack, projectData}) => {
     const [openDonateWindow, setOpenDonateWindow] = useState(false);
 
     function openWindow()
@@ -354,7 +363,7 @@ const SpecificProject: React.FC<ProjectDetails> = ({projectData}) => {
 
             <section>
                 <div className="project-action-buttons">
-                    <button className="back-button project-button"><img src="/Back Icon.svg" alt="back icon" /><p>GO BACK</p></button>
+                    <button onClick={goBack} className="back-button project-button"><img src="/Back Icon.svg" alt="back icon" /><p>GO BACK</p></button>
                     <div className="project-action-buttons">
                         <button className="share-button project-button"><p>SHARE</p><img src="/Share Icon.svg" alt="share arrow" /></button>
                         <button onClick={openWindow} className="donate-button project-button"><p>DONATE NOW</p><img src="/Donate Icon.svg" alt="donate icon" /></button>
@@ -474,6 +483,8 @@ const DonationPerk: React.FC<ProjectDetails> = ({projectData}) => {
         </div>
     );
 }
+
+type PopupWindowProps = ProjectDetails & CloseWindow;
 
 const DonationPopup: React.FC<PopupWindowProps> = ({projectData, closeWindow}) => {
     return (
