@@ -8,6 +8,8 @@ import {
 import LandingV from "./pages/LandingV";
 import Donor00A from "./pages/Donor00A";
 import Donor01A from "./pages/Donor01A";
+import Login from "./pages/login";
+import AccountSettingsProfileOnePage from "./pages/AccountSettingsProfileOnePage";
 
 function App() {
   const action = useNavigationType();
@@ -48,6 +50,8 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<LandingV />} />
+      <Route path="/Login" element={<Login />} />
+      <Route path="/AccountSettings" element={<AccountSettingsProfileOnePage />} />
       <Route path="/Donor00A" element={<Donor00A />} />
       <Route path="/Donor01A" element={<Donor01A />} />
     </Routes>
