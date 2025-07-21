@@ -1,0 +1,152 @@
+/* HelpCenterHome.css */
+
+.help-center-home {
+  position: relative;
+  width: 1440px;
+  height: 1619px;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.help-center-home h2 {
+  margin-bottom: 24px;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  width: 256px;
+  background: #ffffff;
+  padding: 40px 9px;
+}
+
+.sidebar-header {
+  font-size: 14px;
+  color: #5d5d5b;
+  margin: 20px 0 10px 23px;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  padding: 0 20px;
+  padding-left: 50px;
+  border-radius: 28px;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  color: #5d5d5b;
+  margin-bottom: 10px;
+}
+
+.sidebar-item.active {
+  background-color: rgba(235, 240, 240, 0.5);
+  color: #000000;
+}
+
+.sidebar-icon {
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
+}
+
+.main-content {
+  position: relative;
+  top: 40px;
+  left: 423px;
+  width: 850px;
+}
+
+.main-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 32px;
+}
+
+.help-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.help-box {
+  width: 413px;
+  height: auto;
+  background: rgba(235, 240, 240, 0.5);
+  border-radius: 16px;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.help-box h2 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+  margin-bottom: 16px;
+}
+
+.help-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 16px;
+}
+
+.help-box li {
+  font-size: 14px;
+  font-weight: 700;
+  color: #7a52f4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.help-box .see-more {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.popular-articles {
+  display: flex;
+  gap: 24px;
+}
+
+.article-card {
+  height: auto;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 15px;
+  padding: 24px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.article-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.article-card p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #5d5d5b;
+  margin-bottom: 20px;
+}
+
+.article-card .read-more {
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}

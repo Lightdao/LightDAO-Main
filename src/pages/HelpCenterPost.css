@@ -1,0 +1,46 @@
+/*NOTE: whoever wrote this, please rewrite it. Too many position absolutes when*/
+
+.help-center-post {
+  position: relative;
+  width: 849px;
+  left: 423px;
+  top: 40px;
+  font-family: 'Inter', sans-serif;
+}
+
+.intro-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  padding: 30px 0px;
+}
+
+.quote-box {
+  border: 1px solid #CFDBD5;
+  border-radius: 10px;
+  opacity: 0.6;
+  padding: 30px;
+}
+
+.quote-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5D5D5B;
+}
+
+.main-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  padding: 30px 0px;
+}
+
+.note-text {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5D5D5B;
+}

@@ -1,9 +1,9 @@
-import { DonorSideBar } from '../components/DonorSideBar';
-import { HeaderBar } from '../components/DonorHeader';
-import { Footer } from '../components/DonorFooter';
-import { setSideNumber } from '../components/DonorSideBar';
-import { GetAttachmentIcons } from '../components/DonorAttachments';
-import './Donor.css';
+import { DonorSideBar } from "../components/DonorSideBar";
+import { HeaderBar } from "../components/DonorHeader";
+import { setSideNumber } from "../components/DonorSideBar";
+import { GetAttachmentIcons } from "../components/DonorAttachments";
+import MainFooter from "../components/MainFooter";
+import "./Donor.css";
 
 const Donor00A: React.FC<{}> = () => {
     setSideNumber(0);
@@ -14,7 +14,7 @@ const Donor00A: React.FC<{}> = () => {
                 <DonorSideBar />
                 <DonorDashboard />
             </div>
-            <Footer />
+            <MainFooter />
         </div>
     );
 }

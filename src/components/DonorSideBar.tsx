@@ -8,7 +8,6 @@ export function setSideNumber(newValue: number) {
 export const DonorSideBar: React.FC<{}> = () => {
     return (
     <div className="side-bar">
-        <hr />
         <p>Home</p>
         <a className={sideNumber === 0 ? "selected" : ""} href="/Donor00A"><div><img src="dashboard.svg" alt="dashboard icon" /></div> Dashboard</a>
         <hr />

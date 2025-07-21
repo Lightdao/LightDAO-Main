@@ -1,6 +1,8 @@
-export const Footer: React.FC<{}> = () => {
+import "./MainFooter.css";
+
+const MainFooter: React.FC<{}> = () => {
     return (
-        <footer>
+        <footer className="main-footer">
             <div className="copyright">
                 <a href="/">Privacy Policy</a>
                 <a href="/">License</a>
@@ -14,3 +16,5 @@ export const Footer: React.FC<{}> = () => {
         </footer>
     );
 }
+
+export default MainFooter;

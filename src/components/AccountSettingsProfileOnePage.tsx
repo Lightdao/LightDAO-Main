@@ -1,19 +1,24 @@
 import React from 'react';
 import './AccountSettingsProfileOnePage.css';
+import { ChangePageProps } from '../pages/AccountSettingsPage';
 
-const AccountSettingsProfileOnePage: React.FC = () => {
+const AccountSettingsProfileOnePage: React.FC<ChangePageProps> = ({changeSettingsPageHandler}) => {
   return (
     <div className="account-settings-profile">
       <h1>Account Settings</h1>
-      <p>Manage your account profile</p>
+      <h2 className="header-sub">Manage your account profile</h2>
+      <p className="p-sub">Connect with one of our available wallet providers or create a new one.</p>
       <div className="tabs">
-        <button>Profile</button>
-        <button>Wallet</button>
-        <button>Notifications</button>
+        <button onClick={() => changeSettingsPageHandler(0)} className="tab active">Profile</button>
+        <button onClick={() => changeSettingsPageHandler(1)} className="tab">Wallet</button>
+        <button onClick={() => changeSettingsPageHandler(2)} className="tab">Notifications</button>
       </div>
+
+      <hr />
+
       <div className="banner-upload">
-        <p>Banner</p>
-        <p>Recommended size: 1440×460px, 5mb max size</p>
+        <h2 className="header-sub">Banner</h2>
+        <p className="p-sub">Recommended size: 1440x460px, 5mb max size</p>
         <div className="upload-box">Drag your item to upload</div>
       </div>
       <div className="avatar-upload">
@@ -34,18 +39,6 @@ const AccountSettingsProfileOnePage: React.FC = () => {
         <button className="publish">Publish</button>
         <button className="discard">Discard all</button>
       </div>
-      <footer className="footer">
-        <div className="links">
-          <a href="#">Privacy Policy</a>
-          <a href="#">License</a>
-          <a href="#">API</a>
-          <span>© 2024 LightDao All rights reserved</span>
-        </div>
-        <div className="footer-buttons">
-          <button>Currency - USD</button>
-          <button>English</button>
-        </div>
-      </footer>
     </div>
   );
 };

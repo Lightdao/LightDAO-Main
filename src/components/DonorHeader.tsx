@@ -2,7 +2,7 @@ export const HeaderBar: React.FC<{}> = () => {
     let username = "Seraph M.";
     return (
     <>
-        <header>
+        <header className="donor-header">
             <h2 className="logo">LIGHTDAO</h2>
             <input className="search-bar" placeholder="Search items, collections, and accounts" />
             <div className="user-stuff">

@@ -1,0 +1,17 @@
+.Collections {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    width: 100%;
+    min-width: 1500px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.collections-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 225px);
+    grid-template-rows: auto;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 50px;
+}

@@ -1,11 +1,11 @@
-import { useState } from 'react';
-import { DonorSideBar } from '../components/DonorSideBar';
-import { HeaderBar } from '../components/DonorHeader';
-import { Footer } from '../components/DonorFooter';
-import { setSideNumber } from '../components/DonorSideBar';
-import { GetAttachmentIcons } from '../components/DonorAttachments';
-import { ReturnAttachmentNames } from '../components/DonorAttachments';
-import './Donor.css';
+import { useState } from "react";
+import { DonorSideBar } from "../components/DonorSideBar";
+import { HeaderBar } from "../components/DonorHeader";
+import MainFooter from "../components/MainFooter";
+import { setSideNumber } from "../components/DonorSideBar";
+import { GetAttachmentIcons } from "../components/DonorAttachments";
+import { ReturnAttachmentNames } from "../components/DonorAttachments";
+import "./Donor.css";
 
 //NOTE: for now this is global, when backend is implemented it will be removed
 let tableList = [
@@ -164,7 +164,7 @@ const Donor01A: React.FC<{}> = () => {
                 <DonorSideBar />
                 {ProjectSelected ? <SpecificProject goBack={goBack} projectData={tableList[projectIndex]}/> : <ProjectDashboard projectButtonClick={projectButtonClick}/>}
             </div>
-            <Footer />
+            <MainFooter />
         </div>
     );
 }

@@ -9,7 +9,11 @@ import LandingV from "./pages/LandingV";
 import Donor00A from "./pages/Donor00A";
 import Donor01A from "./pages/Donor01A";
 import Login from "./pages/login";
-import AccountSettingsProfileOnePage from "./pages/AccountSettingsProfileOnePage";
+import AccountSettings from "./pages/AccountSettingsPage";
+import HelpCenterHome from "./pages/HelpCenterHome";
+import HelpCenterPost from "./pages/HelpCenterPost";
+import HelpCenterCategory from "./pages/HelpCenterCategory";
+import Collections from "./pages/CollectionsPage";
 
 function App() {
   const action = useNavigationType();
@@ -51,9 +55,13 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingV />} />
       <Route path="/Login" element={<Login />} />
-      <Route path="/AccountSettings" element={<AccountSettingsProfileOnePage />} />
+      <Route path="/AccountSettings" element={<AccountSettings />} />
+      <Route path="/HelpCenter" element={<HelpCenterHome />} />
+      <Route path="/HelpCenterPost" element={<HelpCenterPost />} />
+      <Route path="/HelpCenterCategory" element={<HelpCenterCategory />} />
       <Route path="/Donor00A" element={<Donor00A />} />
       <Route path="/Donor01A" element={<Donor01A />} />
+      <Route path="/Collections" element={<Collections />} />
     </Routes>
   );
 }

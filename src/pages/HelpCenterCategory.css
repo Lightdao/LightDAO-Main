@@ -1,0 +1,75 @@
+.help-category-wrapper {
+  position: relative;
+  width: 849px;
+  margin-left: 423px;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  font-family: 'Inter', sans-serif;
+}
+
+.article-card {
+  position: relative;
+  width: 849px;
+  height: auto;
+  background: white;
+  border: 1px solid #CFDBD5;
+  border-radius: 16px;
+  padding: 28px 30px;
+  box-sizing: border-box;
+}
+
+.article-card h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0 0 15px 0;
+}
+
+.article-card p {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5D5D5B;
+  margin: 0 0 28px 0;
+  max-width: 835px;
+}
+
+.see-more {
+  position: absolute;
+  bottom: 18px;
+  left: 26px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.see-more span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: #000000;
+}
+
+.see-more i {
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.articles-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.help-footer-cta {
+  margin-bottom: 50px;
+}

@@ -1,0 +1,34 @@
+.collections-filters {
+  width: 250px;
+  padding: 20px;
+}
+
+.collections-filters h2 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-right: 100px;
+}
+
+.collections-filter-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.collections-filter-btn {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.collections-filter-btn.active {
+  background-color: #7c5afb;
+  color: white;
+}
+
