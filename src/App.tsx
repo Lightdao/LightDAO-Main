@@ -8,12 +8,13 @@ import {
 import LandingV from "./pages/LandingV";
 import Donor00A from "./pages/Donor00A";
 import Donor01A from "./pages/Donor01A";
-import Login from "./pages/login";
+import Login from "./pages/Login";
 import AccountSettings from "./pages/AccountSettingsPage";
 import HelpCenterHome from "./pages/HelpCenterHome";
 import HelpCenterPost from "./pages/HelpCenterPost";
 import HelpCenterCategory from "./pages/HelpCenterCategory";
 import Collections from "./pages/CollectionsPage";
+import Dashboard from "./pages/DashboardPage";
 
 function App() {
   const action = useNavigationType();
@@ -55,6 +56,7 @@ function App() {
     <Routes>
       <Route path="/" element={<LandingV />} />
       <Route path="/Login" element={<Login />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
       <Route path="/HelpCenterPost" element={<HelpCenterPost />} />

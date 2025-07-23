@@ -1,5 +1,6 @@
 import React from "react";
 import MainHeader from "../components/MainHeader";
+import MainSideBar, { MainPageToLoad } from "../components/MainSideBar";
 import "./HelpCenterCategory.css";
 
 interface HelpArticleCardProps {
@@ -45,6 +46,7 @@ const HelpCenterCategory: React.FC = () => {
   return (
     <>
       <MainHeader />
+      <MainSideBar sidebarNumber={MainPageToLoad.HelpCenter}/>
       <div className="help-category-wrapper">
         <h1 className="page-heading">Troubleshooting</h1>
         <div className="breadcrumb">Help Center &nbsp;/&nbsp; Account &nbsp;/&nbsp; <strong>Troubleshooting</strong></div>

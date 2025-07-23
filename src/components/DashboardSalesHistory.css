@@ -1,0 +1,12 @@
+.sales-history {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.sales-history h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}

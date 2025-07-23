@@ -1,5 +1,7 @@
 import React from 'react';
 import MainHeader from "../components/MainHeader";
+import MainSideBar from '../components/MainSideBar';
+import { MainPageToLoad } from '../components/MainSideBar';
 import './HelpCenterHome.css';
 
 //TODO: link other help pages to here
@@ -8,21 +10,7 @@ const HelpCenterHome: React.FC = () => {
     <>
       <MainHeader />
       <div className="help-center-home">
-        <aside className="sidebar">
-          <div className="sidebar-header">Manage listings</div>
-          <div className="sidebar-item">Dashboard</div>
-          <div className="sidebar-item">Your Listings</div>
-          <div className="sidebar-item">Favorites</div>
-          <div className="sidebar-item">Following</div>
-          <div className="sidebar-item">Payouts</div>
-          <div className="sidebar-header">Profile settings</div>
-          <div className="sidebar-item">Account Details</div>
-          <div className="sidebar-item">Security</div>
-          <div className="sidebar-item">Apps</div>
-          <div className="sidebar-item">Notifications</div>
-          <div className="sidebar-item active">Help Center</div>
-        </aside>
-
+        <MainSideBar sidebarNumber={MainPageToLoad.HelpCenter} />
         <main className="main-content">
           <h1 className="main-title">How it works</h1>
           <section className="help-boxes">

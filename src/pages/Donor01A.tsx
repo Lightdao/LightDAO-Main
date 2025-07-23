@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { DonorSideBar } from "../components/DonorSideBar";
+import DonorSideBar from "../components/DonorSideBar";
+import { PageToLoad } from "../components/DonorSideBar";
 import { HeaderBar } from "../components/DonorHeader";
 import MainFooter from "../components/MainFooter";
-import { setSideNumber } from "../components/DonorSideBar";
 import { GetAttachmentIcons } from "../components/DonorAttachments";
 import { ReturnAttachmentNames } from "../components/DonorAttachments";
 import "./Donor.css";
@@ -156,12 +156,11 @@ const Donor01A: React.FC<{}> = () => {
         setProjectSelected(false);
     }
 
-    setSideNumber(1);
     return (
         <div className="donor-00A">
             <HeaderBar />
             <div className="barpage">
-                <DonorSideBar />
+                <DonorSideBar sidebarNumber={PageToLoad.ProjectDashboard} />
                 {ProjectSelected ? <SpecificProject goBack={goBack} projectData={tableList[projectIndex]}/> : <ProjectDashboard projectButtonClick={projectButtonClick}/>}
             </div>
             <MainFooter />

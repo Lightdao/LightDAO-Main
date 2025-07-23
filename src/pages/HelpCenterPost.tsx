@@ -1,11 +1,13 @@
 import React from 'react';
 import MainHeader from '../components/MainHeader';
 import './HelpCenterPost.css';
+import MainSideBar, { MainPageToLoad } from '../components/MainSideBar';
 
 const HelpCenterPost: React.FC = () => {
   return (
     <>
       <MainHeader />
+      <MainSideBar sidebarNumber={MainPageToLoad.HelpCenter}/>
       <div className="help-center-post">
         <p className="intro-text">
           There is no better advertisement campaign that is low cost and also successful at the same time. Great business

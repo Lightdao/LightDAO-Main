@@ -12,45 +12,6 @@
   margin-bottom: 24px;
 }
 
-.sidebar {
-  position: absolute;
-  left: 0;
-  width: 256px;
-  background: #ffffff;
-  padding: 40px 9px;
-}
-
-.sidebar-header {
-  font-size: 14px;
-  color: #5d5d5b;
-  margin: 20px 0 10px 23px;
-}
-
-.sidebar-item {
-  display: flex;
-  align-items: center;
-  height: 56px;
-  padding: 0 20px;
-  padding-left: 50px;
-  border-radius: 28px;
-  background-color: #ffffff;
-  font-weight: 700;
-  font-size: 14px;
-  color: #5d5d5b;
-  margin-bottom: 10px;
-}
-
-.sidebar-item.active {
-  background-color: rgba(235, 240, 240, 0.5);
-  color: #000000;
-}
-
-.sidebar-icon {
-  width: 22px;
-  height: 22px;
-  margin-right: 10px;
-}
-
 .main-content {
   position: relative;
   top: 40px;

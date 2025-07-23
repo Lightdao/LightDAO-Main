@@ -1,17 +1,17 @@
-import { DonorSideBar } from "../components/DonorSideBar";
+import DonorSideBar from "../components/DonorSideBar";
+import { PageToLoad } from "../components/DonorSideBar";
 import { HeaderBar } from "../components/DonorHeader";
-import { setSideNumber } from "../components/DonorSideBar";
 import { GetAttachmentIcons } from "../components/DonorAttachments";
 import MainFooter from "../components/MainFooter";
 import "./Donor.css";
 
 const Donor00A: React.FC<{}> = () => {
-    setSideNumber(0);
+
     return (
         <div className="donor-00A">
             <HeaderBar />
             <div className="barpage">
-                <DonorSideBar />
+                <DonorSideBar sidebarNumber={PageToLoad.Dashboard} />
                 <DonorDashboard />
             </div>
             <MainFooter />
@@ -153,13 +153,13 @@ const ActivityFeed: React.FC<{}> = () => {
     ];
 
     const tableElements = tableList.map((item) => (
-        <button className="table-rows" key={item.id}>
+        <div className="table-rows" key={item.id}>
             <div className="activity-cell"><p><img src={item.activity} alt="" /></p></div>
             <div className="tall-cell"><p>{item.activitytitle}</p></div>
             <div className="tall-cell"><p>{item.description}</p></div>
             <div className="activity-cell"><p>{item.datetime}</p></div>
             <div className="activity-cell"><div className="download-opentab"><button><img src={item.openNewTab ? "/open_new_tab.svg" : ""} alt="" /></button> <button><img src={item.download ? "/download.svg" : ""} alt="" /></button></div></div>
-        </button>));
+        </div>));
     return (
         <div className="table-body">{tableElements}</div>
     );

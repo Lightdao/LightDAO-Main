@@ -1,0 +1,18 @@
+.dashboard-collections {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+.dashboard-collections table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dashboard-collections th,
+.dashboard-collections td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
