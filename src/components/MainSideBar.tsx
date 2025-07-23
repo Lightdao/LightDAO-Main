@@ -29,7 +29,7 @@ const MainSideBar: React.FC<MainSidebarNumber> = ({sidebarNumber}) => {
                     <a href="/Listings">Your Listings</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.Favorites ? "sidebar-item active" : "sidebar-item"}>
-                    <a href="#">Favorites</a>
+                    <a href="/Favorites">Favorites</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.Following ? "sidebar-item active" : "sidebar-item"}>
                     <a href="#">Following</a>

@@ -15,6 +15,7 @@ import HelpCenterPost from "./pages/HelpCenterPost";
 import HelpCenterCategory from "./pages/HelpCenterCategory";
 import Collections from "./pages/CollectionsPage";
 import Dashboard from "./pages/DashboardPage";
+import Favorites from "./pages/FavoritesPage";
 
 function App() {
   const action = useNavigationType();
@@ -57,6 +58,7 @@ function App() {
       <Route path="/" element={<LandingV />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Favorites" element={<Favorites />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
       <Route path="/HelpCenterPost" element={<HelpCenterPost />} />
