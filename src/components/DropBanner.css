@@ -1,0 +1,28 @@
+.drop-banner {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  margin: 0 80px;
+  position: relative;
+  border-radius: 20px;
+}
+
+.drop-banner-content h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.drop-banner-content p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.drop-buy-now-btn {
+  background-color: #7c5afb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

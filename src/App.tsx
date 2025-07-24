@@ -16,6 +16,7 @@ import HelpCenterCategory from "./pages/HelpCenterCategory";
 import Collections from "./pages/CollectionsPage";
 import Dashboard from "./pages/DashboardPage";
 import Favorites from "./pages/FavoritesPage";
+import Drops from "./pages/DropPage";
 
 function App() {
   const action = useNavigationType();
@@ -61,8 +62,9 @@ function App() {
       <Route path="/Favorites" element={<Favorites />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
-      <Route path="/HelpCenterPost" element={<HelpCenterPost />} />
-      <Route path="/HelpCenterCategory" element={<HelpCenterCategory />} />
+      <Route path="/HelpCenter/HelpCenterPost" element={<HelpCenterPost />} />
+      <Route path="/HelpCenter/HelpCenterCategory" element={<HelpCenterCategory />} />
+      <Route path="/Drops" element={<Drops />} />
       <Route path="/Donor00A" element={<Donor00A />} />
       <Route path="/Donor01A" element={<Donor01A />} />
       <Route path="/Collections" element={<Collections />} />

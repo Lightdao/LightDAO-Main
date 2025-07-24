@@ -13,7 +13,7 @@ const MainHeader: React.FC = () => {
       <nav className="nav-links">
         <a href="#">Explore</a>
         <a href="#">Stats</a>
-        <a href="#">Drops</a>
+        <a href="/Drops">Drops</a>
         <a href="#">Activity</a>
         <button className="create-btn">Create</button>
         <img src="/main profile.png" alt="Profile" className="profile-pic" />
