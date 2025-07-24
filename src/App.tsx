@@ -16,7 +16,10 @@ import HelpCenterCategory from "./pages/HelpCenterCategory";
 import Collections from "./pages/CollectionsPage";
 import Dashboard from "./pages/DashboardPage";
 import Favorites from "./pages/FavoritesPage";
+import Marketplace from "./pages/MarketplacePage";
 import Drops from "./pages/DropPage";
+import Stats from "./pages/StatsPage";
+
 
 function App() {
   const action = useNavigationType();
@@ -60,10 +63,12 @@ function App() {
       <Route path="/Login" element={<Login />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/Favorites" element={<Favorites />} />
+      <Route path="/Marketplace" element={<Marketplace />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
       <Route path="/HelpCenter/HelpCenterPost" element={<HelpCenterPost />} />
       <Route path="/HelpCenter/HelpCenterCategory" element={<HelpCenterCategory />} />
+      <Route path="/Stats" element={<Stats />} />
       <Route path="/Drops" element={<Drops />} />
       <Route path="/Donor00A" element={<Donor00A />} />
       <Route path="/Donor01A" element={<Donor01A />} />

@@ -52,7 +52,7 @@ const HelpCenterHome: React.FC = () => {
                 <li>Marketplace isn't working properly. Now what?</li>
                 <li>I think my NFT disappeared. Why?</li>
               </ul>
-              <a href="#">See more articles</a>
+              <a href="/HelpCenter/HelpCenterCategory">See more articles</a>
             </div>
           </section>
 

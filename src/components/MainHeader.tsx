@@ -11,8 +11,8 @@ const MainHeader: React.FC = () => {
         placeholder="Search items, collections, and accounts"
       />
       <nav className="nav-links">
-        <a href="#">Explore</a>
-        <a href="#">Stats</a>
+        <a href="/Marketplace">Explore</a>
+        <a href="/Stats">Stats</a>
         <a href="/Drops">Drops</a>
         <a href="#">Activity</a>
         <button className="create-btn">Create</button>

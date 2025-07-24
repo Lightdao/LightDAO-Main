@@ -4,22 +4,26 @@ import CollectionsFilters from "../components/CollectionsFilters";
 import CollectionsNFTCard from "../components/CollectionsNFTCard";
 import "./CollectionsPage.css";
 
-//TODO: make this page look like it is supposed to
 const Collections: React.FC<{}> = () =>
 {
-    //NOTE: CollectionsFooter.tsx is missing
+    const NFTCardData = [
+        {title: "name1", price: "10.5", img: "art@2x.png"},
+        {title: "name2", price: "10.5", img: "art@2x.png"},
+        {title: "name3", price: "10.5", img: "art@2x.png"},
+        {title: "name4", price: "10.5", img: "art@2x.png"},
+        {title: "name5", price: "10.5", img: "art@2x.png"},
+        {title: "name6", price: "10.5", img: "art@2x.png"},
+    ];
+
     return (
         <div className="Collections">
             <MainHeader />
             <CollectionsBanner />
             <CollectionsFilters />
             <div className="collections-grid">
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
-                <CollectionsNFTCard title={"name"} price={"10.5"} image="art@2x.png"/>
+                {NFTCardData.map((item, index) => (
+                    <CollectionsNFTCard key={index} title={item.title} price={item.price} image={item.img}/>
+                ))}
             </div>
             {/* missing footer */}
         </div>
