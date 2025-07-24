@@ -8,7 +8,7 @@ const HelpCenterPost: React.FC = () => {
     <>
       <MainHeader />
       <MainSideBar sidebarNumber={MainPageToLoad.HelpCenter}/>
-      <div className="help-center-post">
+      <div className="help-center-post-main-content">
         <p className="intro-text">
           There is no better advertisement campaign that is low cost and also successful at the same time. Great business
           ideas when utilized effectively can save lots of money. This is not only easy for those who work full-time as

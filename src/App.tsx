@@ -19,6 +19,8 @@ import Favorites from "./pages/FavoritesPage";
 import Marketplace from "./pages/MarketplacePage";
 import Drops from "./pages/DropPage";
 import Stats from "./pages/StatsPage";
+import YourCollections from "./pages/YourCollectionsPage";
+import YourListings from "./pages/YourListingsPage";
 
 
 function App() {
@@ -62,6 +64,8 @@ function App() {
       <Route path="/" element={<LandingV />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/YourCollections" element={<YourCollections />} />
+      <Route path="/YourListings" element={<YourListings />} />
       <Route path="/Favorites" element={<Favorites />} />
       <Route path="/Marketplace" element={<Marketplace />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />

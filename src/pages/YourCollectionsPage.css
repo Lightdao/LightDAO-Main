@@ -1,4 +1,4 @@
-.favorites-content {
+.collections-content {
     position: relative;
     left: 400px;
     background-color: #ffffff;
@@ -8,7 +8,7 @@
     min-height: 1000px;
 }
 
-.favorites-content h1 {
+.collections-content h1 {
   font-weight: 900;
   font-size: 48px;
   margin-bottom: 9rem;

@@ -1,11 +1,10 @@
-/*NOTE: whoever wrote this, please rewrite it. Too many position absolutes when*/
-
-.help-center-post {
+.help-center-post-main-content {
   position: relative;
   width: 849px;
   left: 423px;
   top: 40px;
   font-family: 'Inter', sans-serif;
+  min-height: 1000px;
 }
 
 .intro-text {

@@ -2,7 +2,9 @@ import "./MainSideBar.css";
 
 export enum MainPageToLoad {
     Dashboard,
+    YourCollections,
     YourListings,
+    YourProposals,
     Favorites,
     Following,
     Payouts,
@@ -25,8 +27,14 @@ const MainSideBar: React.FC<MainSidebarNumber> = ({sidebarNumber}) => {
                 <li className={sidebarNumber === MainPageToLoad.Dashboard ? "sidebar-item active" : "sidebar-item"}>
                     <a href="/Dashboard">Dashboard</a>
                 </li>
+                <li className={sidebarNumber === MainPageToLoad.YourCollections ? "sidebar-item active" : "sidebar-item"}>
+                    <a href="/YourCollections">Your Collections</a>
+                </li>
                 <li className={sidebarNumber === MainPageToLoad.YourListings ? "sidebar-item active" : "sidebar-item"}>
-                    <a href="/Listings">Your Listings</a>
+                    <a href="/YourListings">Your Listings</a>
+                </li>
+                <li className={sidebarNumber === MainPageToLoad.YourProposals ? "sidebar-item active" : "sidebar-item"}>
+                    <a href="#">Your Proposals</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.Favorites ? "sidebar-item active" : "sidebar-item"}>
                     <a href="/Favorites">Favorites</a>
