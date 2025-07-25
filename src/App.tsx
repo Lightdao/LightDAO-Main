@@ -24,6 +24,8 @@ import YourListings from "./pages/YourListingsPage";
 import Payouts from "./pages/PayoutsPage";
 import YourProposals from "./pages/YourProposalsPage";
 import NFTDetails from "./pages/NFTDetailsPage";
+import NewListing from "./pages/NewListingPage";
+import NewListingsOnePage from "./pages/NewListingsOnePage";
 
 
 function App() {
@@ -83,6 +85,8 @@ function App() {
       <Route path="/Donor01A" element={<Donor01A />} />
       <Route path="/Collections" element={<Collections />} />
       <Route path="/NFTDetails" element={<NFTDetails />} />
+      <Route path="/CreateListing" element={<NewListing />} />
+      <Route path="/CreateListingOnePage" element={<NewListingsOnePage />} />
     </Routes>
   );
 }

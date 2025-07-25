@@ -1,0 +1,159 @@
+/* NewListingsStep2.css */
+
+.new-listings-container {
+  width: 1440px;
+  height: 900px;
+  position: relative;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.title {
+  position: absolute;
+  top: 115px;
+  left: 566px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #000;
+}
+
+.subtitle {
+  position: absolute;
+  top: 168px;
+  left: 509px;
+  width: 422px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5D5D5B;
+}
+
+.card {
+  position: absolute;
+  width: 302px;
+  height: 340px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.single-item-card {
+  left: 406px;
+  top: 263px;
+  background: #ffffff;
+  box-shadow: 0px 3px 4px rgba(153, 155, 168, 0.25);
+}
+
+.collection-item-card {
+  left: 732px;
+  top: 263px;
+  border: 1px solid #CFDBD5;
+}
+
+.item-art {
+  width: 190px;
+  height: 190px;
+  margin-top: 24px;
+  border-radius: 16px;
+  background: #7A52F4;
+  transform: rotate(34deg);
+}
+
+.collection .layer {
+  position: absolute;
+  width: 190px;
+  height: 190px;
+  border-radius: 16px;
+  transform: rotate(34deg);
+  top: 0;
+  left: 0;
+}
+
+.collection .layer-1 {
+  background: rgba(122, 82, 244, 0.6);
+}
+
+.collection .layer-2 {
+  background: rgba(122, 82, 244, 0.8);
+}
+
+.collection .layer-3 {
+  background: #7A52F4;
+}
+
+.card-title {
+  margin-top: 34px;
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  color: #000000;
+}
+
+.select-button {
+  margin-top: auto;
+  margin-bottom: 24px;
+  width: 98px;
+  height: 40px;
+  border-radius: 23px;
+  background: #7A52F4;
+  color: white;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+}
+
+.select-button.outline {
+  background: white;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  color: #000000;
+}
+
+.navigation-buttons {
+  position: absolute;
+  top: 726px;
+  left: 406px;
+  display: flex;
+  gap: 239px;
+  align-items: center;
+}
+
+.nav-button {
+  width: 193px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 23px;
+  border: none;
+}
+
+.step2-nav-button.back {
+  padding: 14px 78px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+  border-radius: 999px;
+  color: #7A52F4;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-button.next {
+  background: #7A52F4;
+  color: white;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: rgba(122, 82, 244, 0.8);
+}
+
+.progress-fill {
+  width: 410px;
+  height: 100%;
+  background: #7A52F4;
+  border-radius: 0 15px 15px 0;
+}

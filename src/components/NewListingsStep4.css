@@ -1,0 +1,132 @@
+/* NewListingsStep4.css */
+
+.step4-container {
+  width: 1440px;
+  height: 900px;
+  position: relative;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Titles */
+.title {
+  position: absolute;
+  top: 115px;
+  left: 540px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #000;
+}
+
+.subtitle {
+  position: absolute;
+  top: 168px;
+  left: 509px;
+  width: 422px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 21px;
+  color: #5D5D5B;
+}
+
+/* Form Layout */
+.form {
+  position: absolute;
+  top: 263px;
+  left: 406px;
+  width: 628px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.split {
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.form-group label {
+  font-size: 12px;
+  font-weight: 500;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.form-group input {
+  height: 48px;
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #5D5D5B;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 24px;
+  outline: none;
+}
+
+/* Tag Elements */
+.tag-list {
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  padding: 6px 18px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+  background: rgba(235, 240, 240, 0.5);
+  border: 1px solid #CFDBD5;
+  border-radius: 18px;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  position: absolute;
+  top: 726px;
+  left: 406px;
+  display: flex;
+  gap: 239px;
+}
+
+.nav-button {
+  width: 193px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 23px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button.back {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+  color: #7A52F4;
+}
+
+.nav-button.next {
+  background: #7A52F4;
+  color: white;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+}
+
+.progress-fill {
+  width: 820px;
+  height: 100%;
+  background: #7A52F4;
+  border-radius: 0 15px 15px 0;
+}

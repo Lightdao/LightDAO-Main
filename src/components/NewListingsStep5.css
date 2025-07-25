@@ -1,0 +1,158 @@
+/* NewListingsStep5.css */
+
+.step5-container {
+  width: 1440px;
+  height: 900px;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+/* Title and Subtitle */
+.title {
+  position: absolute;
+  top: 115px;
+  left: 532px;
+  font-size: 42px;
+  font-weight: 800;
+  color: #000;
+}
+
+.subtitle {
+  position: absolute;
+  top: 168px;
+  left: 509px;
+  width: 422px;
+  text-align: center;
+  font-size: 14px;
+  color: #5D5D5B;
+}
+
+/* Collection List */
+.collection-list {
+  position: absolute;
+  top: 263px;
+  left: 406px;
+  width: 628px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.collection-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 106px;
+  padding: 0 20px;
+  background: #ffffff;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+
+.collection-card.selected {
+  border: 2px solid #7A52F4;
+}
+
+.collection-image {
+  width: 72px;
+  height: 72px;
+  background: rgba(235, 240, 240, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.collection-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.new-image-placeholder {
+  font-size: 28px;
+  line-height: 38px;
+  color: #5D5D5B;
+  font-family: 'Satoshi', sans-serif;
+}
+
+.collection-details {
+  flex: 1;
+  padding: 0 20px;
+}
+
+.collection-details h6 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+}
+
+.collection-details p {
+  font-size: 14px;
+  color: #5D5D5B;
+  margin: 4px 0 0 0;
+}
+
+/* Select Button */
+.select-button {
+  padding: 10px 20px;
+  background: none;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+  border-radius: 23px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* Navigation Buttons */
+.navigation-buttons {
+  position: absolute;
+  top: 726px;
+  left: 406px;
+  display: flex;
+  gap: 239px;
+}
+
+.nav-button {
+  width: 193px;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 23px;
+  border: none;
+  cursor: pointer;
+}
+
+.nav-button.back {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+  color: #7A52F4;
+}
+
+.nav-button.next {
+  background: #7A52F4;
+  color: white;
+}
+
+/* Progress Bar */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+}
+
+.progress-fill {
+  width: 1050px;
+  height: 100%;
+  background: #7A52F4;
+  border-radius: 0 15px 15px 0;
+}
