@@ -1,0 +1,27 @@
+.nft-details-activity {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.nft-details-activity h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.nft-details-activity ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nft-details-activity li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.nft-details-activity li span {
+  display: block;
+}

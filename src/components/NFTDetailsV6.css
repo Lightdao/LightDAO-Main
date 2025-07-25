@@ -1,0 +1,127 @@
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9f9f9;
+  color: #222;
+  margin: 0;
+}
+
+.nft-details-container {
+  width: 90%;
+  margin: auto;
+  max-width: 1200px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.search-bar {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.create-button {
+  background-color: #7a5af5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* NFT Section */
+.nft-section {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.nft-image {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.nft-info {
+  flex: 1;
+}
+
+.nft-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Bids */
+.bids {
+  margin-top: 20px;
+}
+
+.bid {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 5px 0;
+}
+
+/* Place Bid */
+.bid-box {
+  margin-top: 20px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bid-button {
+  width: 100%;
+  padding: 10px;
+  background: #7a5af5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Collection */
+.collection-grid {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.collection-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.collection-card img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.price {
+  font-weight: bold;
+  color: #7a5af5;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  background: #eee;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
