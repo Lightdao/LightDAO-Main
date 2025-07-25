@@ -1,0 +1,15 @@
+.payouts-content {
+    position: relative;
+    left: 400px;
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin-top: 60px;
+    width: 70%;
+    min-height: 1000px;
+}
+
+.payouts-content h1 {
+  font-weight: 900;
+  font-size: 48px;
+  margin-bottom: 2rem;
+}

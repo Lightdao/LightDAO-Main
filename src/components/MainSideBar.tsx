@@ -34,7 +34,7 @@ const MainSideBar: React.FC<MainSidebarNumber> = ({sidebarNumber}) => {
                     <a href="/YourListings">Your Listings</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.YourProposals ? "sidebar-item active" : "sidebar-item"}>
-                    <a href="#">Your Proposals</a>
+                    <a href="/YourProposals">Your Proposals</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.Favorites ? "sidebar-item active" : "sidebar-item"}>
                     <a href="/Favorites">Favorites</a>
@@ -43,7 +43,7 @@ const MainSideBar: React.FC<MainSidebarNumber> = ({sidebarNumber}) => {
                     <a href="#">Following</a>
                 </li>
                 <li className={sidebarNumber === MainPageToLoad.Payouts ? "sidebar-item active" : "sidebar-item"}>
-                    <a href="#">Payouts</a>
+                    <a href="/Payouts">Payouts</a>
                 </li>
                 <div className="sidebar-header">Profile settings</div>
                 <li className={sidebarNumber === MainPageToLoad.AccountDetails ? "sidebar-item active" : "sidebar-item"}>

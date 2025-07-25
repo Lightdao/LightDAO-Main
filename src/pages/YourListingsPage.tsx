@@ -1,11 +1,12 @@
 import Empty from "../components/EmptyPage";
+import ListingsListV1 from "../components/ListingsListV1";
 import MainFooter from "../components/MainFooter";
 import MainHeader from "../components/MainHeader";
 import MainSideBar, { MainPageToLoad } from "../components/MainSideBar";
 import "./YourListingsPage.css";
 
 const YourListings: React.FC<{}> = () => {
-    const yourListings = [];
+    const yourListings = [{}];
     
     return (
         <>
@@ -17,7 +18,7 @@ const YourListings: React.FC<{}> = () => {
                     yourListings.length === 0 ?
                     <Empty emptyHeader="No posted listings found" buttonText="Post your first NFT" navigationLink="/" />
                     :
-                    <></>
+                    <ListingsListV1 />
                 }
             </div>
             <MainFooter />

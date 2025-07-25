@@ -1,0 +1,20 @@
+.listings-list-v1 {
+  display: flex;
+}
+
+.listings-table {
+  display: flex;
+  flex-direction: column;
+  width: 1100px;
+}
+
+.listings-table-header, .listings-table-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+  border: 1px solid #ddd;
+}
+
+.listings-table-header {
+  font-weight: bold;
+}

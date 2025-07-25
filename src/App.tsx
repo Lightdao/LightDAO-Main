@@ -21,6 +21,8 @@ import Drops from "./pages/DropPage";
 import Stats from "./pages/StatsPage";
 import YourCollections from "./pages/YourCollectionsPage";
 import YourListings from "./pages/YourListingsPage";
+import Payouts from "./pages/PayoutsPage";
+import YourProposals from "./pages/YourProposalsPage";
 
 
 function App() {
@@ -66,7 +68,9 @@ function App() {
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/YourCollections" element={<YourCollections />} />
       <Route path="/YourListings" element={<YourListings />} />
+      <Route path="/YourProposals" element={<YourProposals />} />
       <Route path="/Favorites" element={<Favorites />} />
+      <Route path="/Payouts" element={<Payouts />} />
       <Route path="/Marketplace" element={<Marketplace />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />

@@ -1,6 +1,7 @@
 import React from 'react';
 import './ListingsCollections.css';
 
+//TODO: make this look like the collection list page and pass in json data as props
 const ListingsCollections: React.FC = () => {
   return (
     <div className="listings-collections">

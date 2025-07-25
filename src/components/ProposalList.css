@@ -1,0 +1,19 @@
+.proposal-list {
+  display: flex;
+}
+
+.proposal-table {
+  display: flex;
+  flex-direction: column;
+}
+
+.proposal-table-header, .proposal-table-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.proposal-table-header {
+  font-weight: bold;
+}
