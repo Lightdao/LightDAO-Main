@@ -1,19 +1,58 @@
-.proposal-list {
+.proposal-list-v1 {
   display: flex;
 }
 
 .proposal-table {
   display: flex;
   flex-direction: column;
+  gap: 15px;
 }
 
 .proposal-table-header, .proposal-table-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #ddd;
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  padding: 20px 20px;
+  border-radius: 15px;
+  gap: 20px;
+  align-items: center;
+}
+
+.proposal-table-row {
+  border: 1px solid #ddd;
 }
 
 .proposal-table-header {
   font-weight: bold;
+  background-color: #EBF0F0;
+}
+
+.proposal-table-item {
+  font-weight: bold;
+}
+
+.proposal-table-item div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.proposal-table-item div img {
+  object-fit: cover;
+}
+
+.proposal-table-item div .proposal-table-project-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.proposal-table-item div .proposal-table-blockchain-image {
+  width: 30px;
+  height: 30px;
+}
+
+.proposal-table-item div .proposal-table-author-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }
