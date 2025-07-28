@@ -8,7 +8,7 @@ const NewListingsStep7: React.FC = () => {
       <NewListingTopBar />
 
       {/* Title */}
-      <h1 className="title">Ready to publish?</h1>
+      <h1 className="new-listing-title">Ready to publish?</h1>
       <p className="subtitle">
         They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
       </p>
@@ -29,7 +29,7 @@ const NewListingsStep7: React.FC = () => {
       <button className="publish-button">Publish</button>
 
       {/* Progress Bar */}
-      <div className="progress-bar">
+      <div className="create-listing-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

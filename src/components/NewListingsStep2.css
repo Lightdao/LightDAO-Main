@@ -8,7 +8,7 @@
   font-family: 'Inter', sans-serif;
 }
 
-.title {
+.new-listing-title {
   position: absolute;
   top: 115px;
   left: 566px;
@@ -17,7 +17,7 @@
   color: #000;
 }
 
-.subtitle {
+.new-listing-title .subtitle {
   position: absolute;
   top: 168px;
   left: 509px;
@@ -28,7 +28,7 @@
   color: #5D5D5B;
 }
 
-.card {
+.create-listing-card {
   position: absolute;
   width: 302px;
   height: 340px;
@@ -142,7 +142,7 @@
   color: white;
 }
 
-.progress-bar {
+.create-listing-progress-bar {
   position: absolute;
   bottom: 0;
   left: 0;

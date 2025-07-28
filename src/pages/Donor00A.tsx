@@ -90,7 +90,7 @@ const RecommendedProjects: React.FC<{}> = () => {
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src={item.ownerProfilePic} alt="" /></div><p>{item.owner}</p></div>
             <div className="cell"><p>{item.goal}</p></div>
-            <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: item.progress}}></div></div></div>
+            <div className="cell"><div className="donor-progress-bar"><div className="donor-progress-made" style={{width: item.progress}}></div></div></div>
             <div className="cell">
                 <div className="attachment-row">
                     {<GetAttachmentIcons array={item.attachments} />}
@@ -176,42 +176,42 @@ const DonorDashboard: React.FC<{}> = () => {
                 donations, Recommended projects, project 
                 updates, NFTs collected, and many more...
             </p>
-            <div className="cards">
-                <div className="card">
+            <div className="donor-cards">
+                <div className="donor-card">
                     <p className="title green-text"><img src="/money.svg" alt="money icon" /> Total Donation Amount</p>
                     <h2 className="green-text">$5,000</h2>
                     <p className="small-card-text">donated so far</p>
                     <a className="green-text" href="/">View Donations Breakdown</a> <span className="green-text">&gt;</span>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title blue-text"><img src="/Number of Donations Made.svg" alt="number of donations icon" /> Number of Donations</p>
                     <h2 className="blue-text">15</h2>
                     <p className="small-card-text">updated on: 20th Dec, 2024</p>
                     <a className="blue-text" href="/">View Donation History</a> <span className="blue-text">&gt;</span>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title yellow-text"><img src="/Projects Icon.png" alt="project icon" /> Projects Supported</p>
                     <h2 className="yellow-text">8</h2>
                     <p className="small-card-text">projects supported by you</p>
                     <a className="yellow-text" href="/">View Supported Projects</a> <span className="yellow-text">&gt;</span>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title purple-text"><img src="/Average Donation Icon.svg" alt="average donation icon" /> Average Donation</p>
                     <h2 className="purple-text">$333</h2>
                     <p className="small-card-text">Per Donation</p>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title pink-text"><img src="/Largest Donation Icon.svg" alt="largest donation icon" /> Largest Donation</p>
                     <h2 className="pink-text">$1,000</h2>
                     <p className="small-card-text">Keep it up!</p>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title orange-text"><img src="/flag.svg" alt="flag" /> Impact Assessment</p>
                     <h2 className="orange-text">5</h2>
                     <p className="small-card-text">projects goals you helped accomplish</p>
                     <a className="orange-text" href="/">View Impact Assessment</a> <span className="orange-text">&gt;</span>
                 </div>
-                <div className="card">
+                <div className="donor-card">
                     <p className="title dark-blue-text"><img src="/NFT Icon.svg" alt="nft icon" /> NFTs Received</p>
                     <h2 className="dark-blue-text">40</h2>
                     <p className="small-card-text">Collectibles: 25 | Utilities: 15</p>

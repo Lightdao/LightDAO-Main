@@ -10,19 +10,19 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
     <div className="new-listings-container">
       <NewListingTopBar />
       {/* Title */}
-      <h1 className="title">Upload an item</h1>
+      <h1 className="new-listing-title">Upload an item</h1>
       <p className="subtitle">
         They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
       </p>
 
       {/* Option Cards */}
-      <div className="card single-item-card">
+      <div className="create-listing-card single-item-card">
         <div className="item-art" />
         <h6 className="card-title">Create single item</h6>
         <button className="select-button" onClick={() => setSelected('single')}>Select</button>
       </div>
 
-      <div className="card collection-item-card">
+      <div className="create-listing-card collection-item-card">
         <div className="item-art collection">
           <div className="layer layer-1" />
           <div className="layer layer-2" />
@@ -41,7 +41,7 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
       </div>
 
       {/* Progress Bar */}
-      <div className="progress-bar">
+      <div className="create-listing-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

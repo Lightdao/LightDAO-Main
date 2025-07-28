@@ -9,7 +9,7 @@
 }
 
 /* Titles */
-.title {
+.new-listing-title {
   position: absolute;
   top: 115px;
   left: 50%;
@@ -19,7 +19,7 @@
   color: #000;
 }
 
-.subtitle {
+.new-listing-title .subtitle {
   position: absolute;
   top: 168px;
   left: 50%;
@@ -108,7 +108,7 @@
   cursor: pointer;
 }
 
-.progress-bar {
+.create-listing-progress-bar {
   position: absolute;
   bottom: 0;
   width: 100%;

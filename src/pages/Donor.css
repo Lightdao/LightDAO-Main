@@ -66,7 +66,7 @@ p {
     background: rgba(235, 240, 240, 0.5);
     border-radius: 23px;
     padding: 8px 16px;
-    height: 20px;
+    height: 30px;
     width: 25%;
 }
 
@@ -172,46 +172,56 @@ button:hover {
 
 /*card stuff*/
 
-.cards {
+.donor-cards {
     display: grid;
     grid-template-columns: repeat(2, 380px);
-    grid-template-rows: repeat(4, 200px);
+    grid-template-rows: repeat(4, 190px);
     gap: 40px;
 }
 
-.card {
+.donor-card {
     position: relative;
     border-radius: 15px;
     box-shadow: -3px 3px 4px rgba(0, 0, 0, 0.25);
 }
 
-.title {
+.donor-card .title {
+    margin: 10px 0px;
     padding-left: 15px;
     display: flex;
     align-items: center;
+    font-weight: bold;
+    font-size: 1rem;
 }
 
-.title img {
+.donor-card .title img {
     padding-right: 10px;
     width: 30px;
     height: 30px;
 }
 
-.card h2 {
+.donor-card h2 {
     text-align: center;
+    font-size: 34px;
 }
 
-.card a {
+.donor-card p {
+    margin: 20px 0px;
+}
+
+.donor-card a {
     position: absolute;
     right: 30px;
+    bottom: 15px;
 }
 
-.card span {
+.donor-card span {
     position: absolute;
     right: 15px;
+    bottom: 15px;
 }
 
-.cards div:nth-child(1) {
+.donor-cards div:nth-child(1) {
     background-color: #6bbb6f7a;
 }
 
@@ -219,7 +229,7 @@ button:hover {
     color: #38923b;
 }
 
-.cards div:nth-child(2) {
+.donor-cards div:nth-child(2) {
     background-color: #42a4f57d;
 }
 
@@ -227,7 +237,7 @@ button:hover {
     color: #2982ca;
 }
 
-.cards div:nth-child(3) {
+.donor-cards div:nth-child(3) {
     background-color: #ffbb0082;
 }
 
@@ -235,7 +245,7 @@ button:hover {
     color: #997000;
 }
 
-.cards div:nth-child(4) {
+.donor-cards div:nth-child(4) {
     background-color: #9b27b050;
 }
 
@@ -243,7 +253,7 @@ button:hover {
     color: #9C27B0;
 }
 
-.cards div:nth-child(5) {
+.donor-cards div:nth-child(5) {
     background-color: #e91e624a;
 }
 
@@ -251,7 +261,7 @@ button:hover {
     color: #E91E63;
 }
 
-.cards div:nth-child(6) {
+.donor-cards div:nth-child(6) {
     background-color: #ff56224d;
 }
 
@@ -259,7 +269,7 @@ button:hover {
     color: #FF5722;
 }
 
-.cards div:nth-child(7) {
+.donor-cards div:nth-child(7) {
     background-color: #4dafff49;
 }
 
@@ -362,14 +372,14 @@ button:hover {
     font-weight: bold;
 }
 
-.progress-bar {
+.donor-progress-bar {
     width: 100px;
     height: 10px;
     background-color: #03885061;
     border-radius: 10px;
 }
 
-.progress-made {
+.donor-progress-made {
     background-color: #005934;
     height: 10px;
     border-radius: 10px;

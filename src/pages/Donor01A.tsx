@@ -209,7 +209,7 @@ const Projects: React.FC<ProjectFunction> = ({projectButtonClick}) => {
             <div className="cell"><div className="table-img"><img src={item.blockchain + ".svg"} alt="" /></div><p>{item.blockchain}</p></div>
             <div className="cell"><div className="profile-icon"><img src={item.ownerProfilePic} alt="" /></div><p>{item.owner}</p></div>
             <div className="cell"><p>{item.goal}</p></div>
-            <div className="cell"><div className="progress-bar"><div className="progress-made" style={{width: item.progress}}></div></div></div>
+            <div className="cell"><div className="donor-progress-bar"><div className="donor-progress-made" style={{width: item.progress}}></div></div></div>
             <div className="cell">
                 <div className="attachment-row">
                     {<GetAttachmentIcons array={item.attachments} />}
@@ -323,7 +323,7 @@ const SpecificProject: React.FC<SpecificProjectProps> = ({goBack, projectData}) 
                             <p>Funding Goal: $200</p>
                             <div className="project-data-goal round-corner-box">{projectData.goal}</div>
                             <p>Funding Goal: {projectData.progress}%</p>
-                            <div className="progress-bar"><div className="progress-made" style={{width: projectData.progress}}></div></div>
+                            <div className="donor-progress-bar"><div className="donor-progress-made" style={{width: projectData.progress}}></div></div>
                         </div>
                         <div className="project-categories">
                             <p>Category: </p>
