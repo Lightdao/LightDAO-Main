@@ -15,7 +15,7 @@ interface CollectionItemList
 const ListingsCollections: React.FC<CollectionItemList> = ({collectionList}) => {
   return (
     <div className="listings-collections">
-      {collectionList.map((item) => (<IndividualCollectionItem name={item.name} numItems={item.numItems} image={item.image} />))}
+      {collectionList.map((item, index) => (<IndividualCollectionItem key={index} name={item.name} numItems={item.numItems} image={item.image} />))}
     </div>
   );
 };

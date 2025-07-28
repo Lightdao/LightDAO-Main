@@ -1,62 +1,51 @@
 import React from 'react';
 import './ListingsListV1.css';
 
-//TODO: make the table data into props
-const ListingsListV1: React.FC = () => {
+interface ListingsListData {
+  name: string;
+  category: string;
+  blockchain: string;
+  bid: number;
+  views: number;
+  auction: boolean;
+  image: string;
+}
+
+interface ListingsList {
+  listingList: ListingsListData[];
+}
+
+const ListingsListV1: React.FC<ListingsList> = ({listingList}) => {
   return (
     <div className="listings-list-v1">
       <div className="listings-table">
         <div className="listings-table-header">
-          <span>Name</span>
-          <span>Category</span>
-          <span>Blockchain</span>
-          <span>Bid</span>
-          <span>Views</span>
-          <span>Auction</span>
+          <div>Name</div>
+          <div>Category</div>
+          <div>Blockchain</div>
+          <div>Bid</div>
+          <div>Views</div>
+          <div>Auction</div>
         </div>
-        <div className="listings-table-row">
-          <span>Election Season</span>
-          <span>Art</span>
-          <span>Flow</span>
-          <span>0.45 Sd</span>
-          <span>4,918</span>
-          <span>Running</span>
-        </div>
-        <div className="listings-table-row">
-          <span>Lon’t Ad Issues</span>
-          <span>Collections</span>
-          <span>Tears</span>
-          <span>5.13 Sd</span>
-          <span>4,570</span>
-          <span></span>
-        </div>
-        <div className="listings-table-row">
-          <span>Science Jobs</span>
-          <span>Photography</span>
-          <span>Emerson</span>
-          <span>3.89 Sd</span>
-          <span>4,310</span>
-          <span></span>
-        </div>
-        <div className="listings-table-row">
-          <span>Capturing Memories</span>
-          <span>Collections</span>
-          <span>Flow</span>
-          <span>0.45 Sd</span>
-          <span>3,909</span>
-          <span>Running</span>
-        </div>
-        <div className="listings-table-row">
-          <span>Tracking on the Go</span>
-          <span>Art</span>
-          <span>Tears</span>
-          <span>3.40 Sd</span>
-          <span>3,570</span>
-          <span></span>
-        </div>
+        {listingList.map((item, index) => (
+          <CreateListingRows key={index} name={item.name} category={item.category} blockchain={item.blockchain} bid={item.bid} views={item.views} auction={item.auction} image={item.image} />
+        ))}
       </div>
     </div>
   );
 };
+
+const CreateListingRows: React.FC<ListingsListData> = ({name, category, blockchain, bid, views, auction, image}) => {
+  return (
+    <div className="listings-table-row">
+      <div className="listings-table-item"><div><img src={image} alt={name + " icon"} />{name}</div></div>
+      <div className="listings-table-item">{category}</div>
+      <div className="listings-table-item">{blockchain}</div>
+      <div className="listings-table-item">{bid} Sol</div>
+      <div className="listings-table-item">{views}</div>
+      <div className="listings-table-item">{auction ? <div className="listing-table-item-auction"><div className="auction-icon"></div>Running</div> : ""}</div>
+    </div>
+  );
+}
 
 export default ListingsListV1;
