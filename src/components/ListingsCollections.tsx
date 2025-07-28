@@ -1,18 +1,34 @@
 import React from 'react';
 import './ListingsCollections.css';
 
-//TODO: make this look like the collection list page and pass in json data as props
-const ListingsCollections: React.FC = () => {
+interface CollectionItemInformation {
+  name: string;
+  numItems: number;
+  image: string;
+}
+
+interface CollectionItemList
+{
+  collectionList: CollectionItemInformation[];
+}
+
+const ListingsCollections: React.FC<CollectionItemList> = ({collectionList}) => {
   return (
     <div className="listings-collections">
-      <div>May Bring Back 10 Items</div>
-      <div>Auto Technology 132 Items</div>
-      <div>Front Desk 86 Items</div>
-      <div>Farhad's and Mike 28.0DS ETH</div>
-      <div>Walgreens Chief 66 Items</div>
-      <div>Improving Culture 164 Items</div>
+      {collectionList.map((item) => (<IndividualCollectionItem name={item.name} numItems={item.numItems} image={item.image} />))}
     </div>
   );
 };
+
+const IndividualCollectionItem: React.FC<CollectionItemInformation> = ({name, numItems, image}) => {
+  return (
+    <div className="listings-collections-item">
+      <img src={image} alt="tracking logo" />
+      <div className="listings-collections-item-data">
+        <h2>{name}</h2>
+        <p><span>{numItems}</span> items</p>
+      </div>
+    </div>);
+}
 
 export default ListingsCollections;
