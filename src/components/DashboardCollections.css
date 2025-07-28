@@ -1,18 +1,58 @@
 .dashboard-collections {
   background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 12px;
   font-family: 'Inter', sans-serif;
+  margin-bottom: 20px;
 }
 
 .dashboard-collections table {
   width: 100%;
   border-collapse: collapse;
+  text-align: left;
+}
+
+.dashboard-collections tr {
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-collections tbody tr:last-child {
+  border-bottom: none;
 }
 
 .dashboard-collections th,
 .dashboard-collections td {
-  padding: 10px;
-  border: 1px solid #ddd;
+  padding: 20px 15px;
+}
+
+.dashboard-collections-positive-change {
+  color: #03DB80;
+  font-weight: bold;
+}
+
+.dashboard-collections-negative-change {
+  color:	#ff0000;
+  font-weight: bold;
+}
+
+.dashboard-collections td .dashboard-collection-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-collections td .dashboard-collection-name img {
+  width: 50px;
+  height: auto;
+}
+
+.dashboard-collections td .dashboard-collection-crypto-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard-collections td .dashboard-collection-crypto-icon img {
+  width: 25px;
+  height: auto;
 }

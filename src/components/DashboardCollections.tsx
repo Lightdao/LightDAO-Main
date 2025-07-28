@@ -1,18 +1,17 @@
 import React from "react";
 import "./DashboardCollections.css";
 
-const collections = [
-  { name: "Meaningful Project", owners: "10.0k", change: +18.60, price: "4,915" },
-  { name: "Kingdom Project", owners: "8.8k", change: -24.50, price: "99.1" },
-  { name: "RTFKT CloneX Mintvial", owners: "14.5k", change: +13.00, price: "4,310" },
-  { name: "Chromie Squiggle by Snowfro", owners: "6.7k", change: +19.30, price: "3,905" },
-  { name: "Kingdom Kennel Club", owners: "19.7k", change: +29.00, price: "3,570" }
-];
-
 const DashboardCollections: React.FC = () => {
+  const collections = [
+    { name: "Meaningful Project", owners: "10.0k", change: +18.60, price: "4,915", image: "/behind.png" },
+    { name: "Kingdom Project", owners: "8.8k", change: -24.50, price: "99.1", image: "/behind.png" },
+    { name: "RTFKT CloneX Mintvial", owners: "14.5k", change: +13.00, price: "4,310", image: "/behind.png" },
+    { name: "Chromie Squiggle by Snowfro", owners: "6.7k", change: +19.30, price: "3,905", image: "/behind.png" },
+    { name: "Kingdom Kennel Club", owners: "19.7k", change: +29.00, price: "3,570", image: "/behind.png" }
+  ];
+
   return (
     <div className="dashboard-collections">
-      <h2>Collections</h2>
       <table>
         <thead>
           <tr>
@@ -25,10 +24,10 @@ const DashboardCollections: React.FC = () => {
         <tbody>
           {collections.map((collection, index) => (
             <tr key={index}>
-              <td>{collection.name}</td>
+              <td><div className="dashboard-collection-name"><img src={collection.image} alt="collection image" />{collection.name}</div></td>
               <td>{collection.owners}</td>
-              <td>{collection.change}%</td>
-              <td>{collection.price}</td>
+              <td className={collection.change > 0 ? "dashboard-collections-positive-change" : "dashboard-collections-negative-change"}>{collection.change}%</td>
+              <td><div className="dashboard-collection-crypto-icon"><img src="/Solana.svg" alt="solana icon" />{collection.price}</div></td>
             </tr>
           ))}
         </tbody>
