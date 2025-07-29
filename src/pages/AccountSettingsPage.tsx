@@ -30,6 +30,7 @@ const CurrentSettingsPage: React.FC<{}> = () => {
         setAccountSettingsPageNumber(pageNumber);
     }
 
+    //TODO: add previous banner preview
     switch (accountSettingsPageNumber)
     {
         case 0:

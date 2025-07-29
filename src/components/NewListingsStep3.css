@@ -8,19 +8,20 @@
   font-family: 'Inter', sans-serif;
 }
 
-.new-listing-title {
+.step3-title {
   position: absolute;
-  top: 115px;
-  left: 566px;
+  top: 100px;
+  left: 525px;
+}
+
+.step3-title .new-listing-title {
+  text-align: center;
   font-size: 42px;
   font-weight: 800;
   color: #000;
 }
 
-.new-listing-title .subtitle {
-  position: absolute;
-  top: 168px;
-  left: 509px;
+.step3-title .subtitle {
   width: 422px;
   text-align: center;
   font-size: 14px;
@@ -88,16 +89,16 @@
   color: white;
 }
 
-.create-listing-progress-bar {
+.step3-progress-bar {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 6px;
+  height: 8px;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
 }
 
-.progress-fill {
+.step3-progress-bar .progress-fill {
   width: 615px;
   height: 100%;
   background: #7A52F4;

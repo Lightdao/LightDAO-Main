@@ -1,46 +1,51 @@
 import React from 'react';
 import './Payoutslistv1.css';
 
-const PayoutsListv1: React.FC = () => {
+interface PayoutListData {
+  name: string;
+  price: number;
+  fee: number;
+  quantity: number;
+  payout: number;
+  paidStatus: boolean;
+  image: string;
+}
+
+interface PayoutList {
+  payoutList: PayoutListData[];
+}
+
+const PayoutsListv1: React.FC<PayoutList> = ({payoutList}) => {
   return (
-    <div className="payouts-list">
-      <div className="payouts-table-header">
-        <span>Name</span>
-        <span>Price</span>
-        <span>Fee</span>
-        <span>Qty</span>
-        <span>Payout</span>
-        <span>Status</span>
-      </div>
-      <div className="payout-item">
-        <img src="/behind.png" alt="NFT 1" className="nft-image" />
-        <span className="name">May Bring Back</span>
-        <span className="price">0.45 Sol</span>
-        <span className="fee">0.04 Sol</span>
-        <span className="qty">1</span>
-        <span className="payout">$10.00 USD</span>
-        <span className="status pending">Pending</span>
-      </div>
-      <div className="payout-item">
-        <img src="/behind.png" alt="NFT 2" className="nft-image" />
-        <span className="name">Capturing Memories</span>
-        <span className="price">5.13 Sol</span>
-        <span className="fee">0.51 Sol</span>
-        <span className="qty">1</span>
-        <span className="payout">$14.50 USD</span>
-        <span className="status pending">Pending</span>
-      </div>
-      <div className="payout-item">
-        <img src="/behind.png" alt="NFT 3" className="nft-image" />
-        <span className="name">Agents Were Behind</span>
-        <span className="price">3.59 Sol</span>
-        <span className="fee">0.36 Sol</span>
-        <span className="qty">1</span>
-        <span className="payout">$418.50 USD</span>
-        <span className="status paid">Paid</span>
+    <div className="payout-list">
+      <div className="payout-table">
+        <div className="payout-table-header">
+          <div>Name</div>
+          <div>Price</div>
+          <div>Fee</div>
+          <div>Qty</div>
+          <div>Payout</div>
+          <div>Status</div>
+        </div>
+        {payoutList.map((item, index) => (
+          <CreatepayoutRows key={index} name={item.name} price={item.price} fee={item.fee} quantity={item.quantity} payout={item.payout} paidStatus={item.paidStatus} image={item.image} />
+        ))}
       </div>
     </div>
   );
 };
+
+const CreatepayoutRows: React.FC<PayoutListData> = ({name, price, fee, quantity, payout, paidStatus, image}) => {
+  return (
+    <div className="payout-table-row">
+      <div className="payout-table-item"><div><img className="payout-table-project-image" src={image} alt={name + " icon"} />{name}</div></div>
+      <div className="payout-table-item">{price} Sol</div>
+      <div className="payout-table-item">{fee}</div>
+      <div className="payout-table-item">{quantity}</div>
+      <div className="payout-table-item">${payout} USD</div>
+      <div className="payout-table-item">{paidStatus ? <div className="payout-table-project-item-status"><div className="payout-table-project-item-paid"></div>Paid</div> : <div className="payout-table-project-item-status"><div className="payout-table-project-item-pending"></div>Pending</div>}</div>
+    </div>
+  );
+}
 
 export default PayoutsListv1;

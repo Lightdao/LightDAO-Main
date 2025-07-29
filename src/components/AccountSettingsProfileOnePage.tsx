@@ -19,11 +19,11 @@ const AccountSettingsProfileOnePage: React.FC<ChangePageProps> = ({changeSetting
       <div className="banner-upload">
         <h2 className="header-sub">Banner</h2>
         <p className="p-sub">Recommended size: 1440x460px, 5mb max size</p>
-        <div className="upload-box">Drag your item to upload</div>
+        <div className="banner-upload-box">Drag your item to upload</div>
       </div>
       <div className="avatar-upload">
         <p>Avatar</p>
-        <p>Recommended 500×500, 2.5mb max size</p>
+        <p>Recommended 500x500, 2.5mb max size</p>
       </div>
       <form className="account-form">
         <label>Email<input type="email" placeholder="e.g. Please provide your email" /></label>

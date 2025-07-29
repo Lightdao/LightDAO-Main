@@ -1,25 +1,27 @@
-import React, { useState } from 'react';
-import { StepHandler } from '../pages/NewListingPage';
-import './NewListingsStep2.css';
-import NewListingTopBar from './NewListingTopBar';
+import React, { useState } from "react";
+import { StepHandler } from "../pages/NewListingPage";
+import "./NewListingsStep2.css";
+import NewListingTopBar from "./NewListingTopBar";
 
 const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNumber}) => {
-  const [selected, setSelected] = useState<'single' | 'collection' | null>(null);
+  const [selected, setSelected] = useState<"single" | "collection" | null>(null);
 
   return (
     <div className="new-listings-container">
       <NewListingTopBar />
       {/* Title */}
-      <h1 className="new-listing-title">Upload an item</h1>
-      <p className="subtitle">
-        They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
-      </p>
+      <div className="step2-title">
+        <h1 className="new-listing-title">Upload an item</h1>
+        <p className="subtitle">
+          They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
+        </p>
+      </div>
 
       {/* Option Cards */}
       <div className="create-listing-card single-item-card">
         <div className="item-art" />
         <h6 className="card-title">Create single item</h6>
-        <button className="select-button" onClick={() => setSelected('single')}>Select</button>
+        <button className="select-button" onClick={() => setSelected("single")}>Select</button>
       </div>
 
       <div className="create-listing-card collection-item-card">
@@ -29,7 +31,7 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
           <div className="layer layer-3" />
         </div>
         <h6 className="card-title">Create collection</h6>
-        <button className="select-button outline" onClick={() => setSelected('collection')}>Select</button>
+        <button className="select-button outline" onClick={() => setSelected("collection")}>Select</button>
       </div>
 
       {/* Navigation Buttons */}
@@ -41,7 +43,7 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
       </div>
 
       {/* Progress Bar */}
-      <div className="create-listing-progress-bar">
+      <div className="step2-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

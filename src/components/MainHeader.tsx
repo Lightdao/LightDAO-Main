@@ -14,7 +14,7 @@ const MainHeader: React.FC = () => {
         <a href="/Marketplace">Explore</a>
         <a href="/Stats">Stats</a>
         <a href="/Drops">Drops</a>
-        <a href="#">Activity</a>
+        <a href="/Dashboard">Activity</a>
         <a href="/CreateListing" className="create-btn">Create</a>
         <img src="/main profile.png" alt="Profile" className="profile-pic" />
       </nav>

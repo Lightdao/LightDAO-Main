@@ -40,6 +40,11 @@
   max-width: 835px;
 }
 
+.article-card .article-link {
+  color: #000000;
+  text-decoration: none;
+}
+
 .see-more {
   position: absolute;
   bottom: 18px;

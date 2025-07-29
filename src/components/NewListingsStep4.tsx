@@ -9,10 +9,12 @@ const NewListingsStep4: React.FC<StepHandler> = ({incrementStepNumber, decrement
       <NewListingTopBar />
 
       {/* Title */}
-      <h1 className="new-listing-title">Enter item details</h1>
-      <p className="subtitle">
-        They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
-      </p>
+      <div className="step4-title">
+        <h1 className="new-listing-title">Enter item details</h1>
+        <p className="subtitle">
+          They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
+        </p>
+      </div>
 
       {/* Form Fields */}
       <div className="form">
@@ -51,7 +53,7 @@ const NewListingsStep4: React.FC<StepHandler> = ({incrementStepNumber, decrement
       </div>
 
       {/* Progress Bar */}
-      <div className="create-listing-progress-bar">
+      <div className="step4-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

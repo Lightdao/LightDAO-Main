@@ -55,22 +55,26 @@ const NewListingsStep6: React.FC<StepHandler> = ({incrementStepNumber, decrement
       <NewListingTopBar />
 
       {/* Title */}
-      <h1 className="new-listing-title">Set preferences</h1>
-      <p className="subtitle">
-        They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
-      </p>
+      <div className="step6-title">
+        <h1 className="new-listing-title">Set preferences</h1>
+        <p className="subtitle">
+          They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
+        </p>
+      </div>
 
       {/* Preference List */}
       <div className="preference-list">
         {preferences.map((pref) => (
           <div key={pref.key} className="preference-item">
-            <span className="preference-subtitle">{pref.label}</span>
-            <span className="preference-title">{pref.description}</span>
+            <div className="preference-labels">
+              <span className="preference-subtitle">{pref.label}</span>
+              <span className="preference-title">{pref.description}</span>
+            </div>
             <div
               className={`toggle-switch ${toggles[pref.key] ? 'on' : 'off'}`}
               onClick={() => toggleSwitch(pref.key)}
             >
-              <div className="toggle-knob" />
+              <div className="toggle-circle" />
             </div>
           </div>
         ))}
@@ -83,7 +87,7 @@ const NewListingsStep6: React.FC<StepHandler> = ({incrementStepNumber, decrement
       </div>
 
       {/* Progress Bar */}
-      <div className="create-listing-progress-bar">
+      <div className="step6-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

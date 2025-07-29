@@ -39,10 +39,12 @@ const NewListingsStep5: React.FC<StepHandler> = ({incrementStepNumber, decrement
       <NewListingTopBar />
 
       {/* Title */}
-      <h1 className="new-listing-title">Choose collection</h1>
-      <p className="subtitle">
-        They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
-      </p>
+      <div className="step5-title">
+        <h1 className="new-listing-title">Choose collection</h1>
+        <p className="subtitle">
+          They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
+        </p>
+      </div>
 
       {/* Collection List */}
       <div className="collection-list">
@@ -75,7 +77,7 @@ const NewListingsStep5: React.FC<StepHandler> = ({incrementStepNumber, decrement
       </div>
 
       {/* Progress Bar */}
-      <div className="create-listing-progress-bar">
+      <div className="step5-progress-bar">
         <div className="progress-fill" />
       </div>
     </div>

@@ -77,8 +77,8 @@ function App() {
       <Route path="/Marketplace" element={<Marketplace />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
-      <Route path="/HelpCenter/HelpCenterPost" element={<HelpCenterPost />} />
       <Route path="/HelpCenter/HelpCenterCategory" element={<HelpCenterCategory />} />
+      <Route path="/HelpCenterHome/HelpCenterCategory/HelpCenterPost" element={<HelpCenterPost />} />
       <Route path="/Stats" element={<Stats />} />
       <Route path="/Drops" element={<Drops />} />
       <Route path="/Donor00A" element={<Donor00A />} />

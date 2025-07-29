@@ -20,9 +20,8 @@
   flex: 1;
   margin: 0 100px;
   padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #555;
+  border-radius: 999px;
+  background-color: #EBF0F0;
 }
 
 .nav-links {
