@@ -27,7 +27,7 @@ export const GetAttachmentIcons: React.FC<GetAttachmentProps> = ({array}) => {
         imageArray.push(<img key={-1} src={extraIcon} width={14} height={18} alt="attachment icon"/>);
     }
 
-    return imageArray;
+    return <>{imageArray}</>;
 }
 
 interface ReturnAttachmentProps {
@@ -49,5 +49,5 @@ export const ReturnAttachmentNames: React.FC<ReturnAttachmentProps> = ({array, p
         attachments.push(<div key={i + 1} className="round-corner-box" style={{backgroundColor: attachmentColors[i], color: "#FFFFFF"}}>{projectName + attachmentTypes[i]}</div>);
     }
 
-    return attachments;
+    return <>{attachments}</>;
 }
