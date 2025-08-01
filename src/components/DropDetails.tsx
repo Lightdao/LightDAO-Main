@@ -1,5 +1,5 @@
 import React from "react";
-import "./dropdetails.css"; // Importing the CSS file
+import "./DropDetails.css"; // Importing the CSS file
 
 const DropDetails: React.FC<{}> = () => {
   return (
