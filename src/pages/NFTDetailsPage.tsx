@@ -3,17 +3,19 @@ import NFTDetailsActivity from "../components/NFTDetailsActivity";
 import NFTDetailsMain from "../components/NFTDetailsMain";
 import NFTDetailsRelated from "../components/NFTDetailsRelated";
 import NFTDetailsV6 from "../components/NFTDetailsV6";
-
+import "./NFTDetailsPage.css"
 
 const NFTDetails: React.FC<{}> = () => {
     return (
         <div className="NFT-Details-page">
             <MainHeader />
-            <NFTDetailsMain />
-            <NFTDetailsActivity />
+            <div className="NFT-Details-grid">
+                <NFTDetailsMain />
+                <NFTDetailsActivity />
+            </div>
             <NFTDetailsRelated />
         </div>
-    );
+        );
 }
 
 export default NFTDetails;

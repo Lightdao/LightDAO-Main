@@ -1,0 +1,33 @@
+.NFT-Details-page {
+  width: 1500px;
+  background: #ffffff;
+  font-family: 'Inter', sans-serif;
+}
+
+.NFT-Details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    'one two'
+    'one four'
+    'three four'
+    'five five';
+    gap: 0px 50px;
+    margin: 20px 50px;
+}
+
+.NFT-Details-grid div:nth-child(1) {
+    grid-area: one;
+}
+
+.NFT-Details-grid div:nth-child(2) {
+    grid-area: two;
+}
+
+.NFT-Details-grid div:nth-child(3) {
+    grid-area: three;
+}
+
+.NFT-Details-grid div:nth-child(4) {
+    grid-area: four;
+}

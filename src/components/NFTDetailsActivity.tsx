@@ -13,7 +13,7 @@ const NFTDetailsActivity: React.FC = () => {
 
 
   return (
-    <aside className="nft-details-activity">
+    <div className="nft-details-activity">
       <h2>Activity</h2>
       <ul>
         {bids.map((bid, index) => (
@@ -24,7 +24,7 @@ const NFTDetailsActivity: React.FC = () => {
           </li>
         ))}
       </ul>
-    </aside>
+    </div>
   );
 };
 

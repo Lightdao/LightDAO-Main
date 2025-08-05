@@ -3,10 +3,10 @@ import "./NFTDetailsMain.css";
 
 const NFTDetailsMain: React.FC = () => {
   return (
-    <main className="nft-details-main">
+    <>
       <div className="nft-image-section">
         <img
-          src="/path/to/nft-image.jpg"
+          src="Lion.png"
           alt="Lion of Judah"
           className="nft-image"
         />
@@ -17,8 +17,10 @@ const NFTDetailsMain: React.FC = () => {
           A collection of 10,000 unique NFTs minted on the Solana blockchain.
           Each unique artwork is randomly generated from a combination of traits.
         </p>
+      </div>
+      <div className="nft-auction-section">
         <div className="nft-price">
-          <span>2.87 SOL</span> <span>(92.1K USD)</span>
+            <span>2.87 SOL</span> <span>(92.1K USD)</span>
         </div>
         <div className="nft-auction">
           <p>Sale ends in:</p>
@@ -27,7 +29,7 @@ const NFTDetailsMain: React.FC = () => {
         <button className="place-bid-btn">Place Your Bid</button>
         <p className="nft-address">0x10A2FF1022D...0eD3a87E</p>
       </div>
-    </main>
+    </>
   );
 };
 

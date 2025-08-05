@@ -1,27 +1,30 @@
 .nft-details-related {
-  padding: 20px;
   background-color: #fff;
+  margin: 50px;
 }
 
-.related-grid {
+.nft-details-related-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-top: 30px;
 }
 
-.related-card {
+.nft-details-related-card {
   text-align: center;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
+  border-radius: 13px;
 }
 
-.related-card img {
+.nft-details-related-card img {
   width: 100%;
-  border-radius: 5px;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
-.related-card h3 {
+.nft-details-related-card h3 {
   margin: 10px 0;
   font-size: 16px;
 }
