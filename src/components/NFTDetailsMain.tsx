@@ -1,5 +1,7 @@
 import React from "react";
 import "./NFTDetailsMain.css";
+import Timer from "./Timer";
+import NFTDetailsActivity from "./NFTDetailsActivity";
 
 const NFTDetailsMain: React.FC = () => {
   return (
@@ -20,14 +22,24 @@ const NFTDetailsMain: React.FC = () => {
       </div>
       <div className="nft-auction-section">
         <div className="nft-price">
-            <span>2.87 SOL</span> <span>(92.1K USD)</span>
+          <p>Top Bid:</p>
+          <span>2.87 SOL (92.1K USD)</span>
+          <button className="nft-address">0x10A2FF1022D...0eD3a87E</button>
         </div>
         <div className="nft-auction">
           <p>Sale ends in:</p>
-          <p className="nft-timer">3d 10h 40m 37s</p>
+          <Timer initialTimerValueSeconds={297637} />
+          <button className="place-bid-btn">Place Your Bid</button>
         </div>
-        <button className="place-bid-btn">Place Your Bid</button>
-        <p className="nft-address">0x10A2FF1022D...0eD3a87E</p>
+      </div>
+      <div className="nft-bidding-section">
+        <div className="nft-bidding-section-buttons">
+          <button className="">Details</button>
+          <button className="">Bids</button>
+          <button className="active">Activity</button>
+        </div>
+        <hr />
+        <NFTDetailsActivity />
       </div>
     </>
   );

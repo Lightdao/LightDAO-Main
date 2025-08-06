@@ -11,7 +11,6 @@ const NFTDetails: React.FC<{}> = () => {
             <MainHeader />
             <div className="NFT-Details-grid">
                 <NFTDetailsMain />
-                <NFTDetailsActivity />
             </div>
             <NFTDetailsRelated />
         </div>

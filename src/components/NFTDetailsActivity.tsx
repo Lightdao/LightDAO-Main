@@ -14,7 +14,6 @@ const NFTDetailsActivity: React.FC = () => {
 
   return (
     <div className="nft-details-activity">
-      <h2>Activity</h2>
       <ul>
         {bids.map((bid, index) => (
           <li key={index}>
