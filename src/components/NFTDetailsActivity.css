@@ -2,23 +2,38 @@
   padding: 20px;
 }
 
+.nft-details-activity ul li p {
+  color: #000;
+}
+
 .nft-details-activity h2 {
   font-size: 18px;
   margin-bottom: 15px;
 }
 
 .nft-details-activity ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   list-style: none;
   padding: 0;
 }
 
 .nft-details-activity li {
   display: flex;
+  align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
   font-size: 14px;
 }
 
-.nft-details-activity li span {
-  display: block;
+.nft-details-activity-profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nft-details-activity-bid {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
