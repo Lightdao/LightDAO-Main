@@ -1,5 +1,3 @@
-/* Account setting / Wallet / One Page */
-
 .wallet-settings-page {
   width: 1440px;
   padding: 80px;
@@ -42,4 +40,72 @@
   justify-content: center;
   font-size: 14px;
   font-weight: 700;
+}
+
+
+.wallet-settings-preference-list {
+  width: 100%;
+}
+
+.wallet-settings-preference-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgba(207, 219, 213, 0.6);
+  padding-bottom: 12px;
+}
+
+.wallet-settings-preference-labels {
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-settings-preference-labels span:first-child {
+  font-size: 12px;
+  color: #5D5D5B;
+  font-weight: 500;
+}
+
+.wallet-settings-preference-labels span:last-child {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.wallet-settings-toggle-switch {
+  width: 40px;
+  height: 22px;
+  background: #7A52F4;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.wallet-settings-toggle-switch.off {
+  background: transparent;
+  border: 1px solid rgba(207, 219, 213, 0.6);
+}
+
+.wallet-settings-toggle-circle {
+  width: 16px;
+  height: 16px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: left 0.3s;
+}
+
+.wallet-settings-toggle-switch.on .wallet-settings-toggle-circle {
+  left: 21px;
+}
+
+.wallet-settings-toggle-switch.off .wallet-settings-toggle-circle {
+  background: #000000;
+  left: 3px;
 }
