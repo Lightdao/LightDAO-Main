@@ -62,7 +62,7 @@ section p {
   color: #000;
 }
 
-.upload-box {
+.upload-section .upload-box {
   border: 1px dashed #CFDBD5;
   border-radius: 12px;
   text-align: center;

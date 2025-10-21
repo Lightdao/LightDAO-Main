@@ -1,8 +1,9 @@
 import React from 'react';
 import './NewListingsStep7.css';
 import NewListingTopBar from './NewListingTopBar';
+import { ImageData } from '../pages/NewListingPage';
 
-const NewListingsStep7: React.FC = () => {
+const NewListingsStep7: React.FC<ImageData> = ({selectedImage, imagePreviewUrl}) => {
   return (
     <div className="step7-container">
       <NewListingTopBar />
@@ -18,7 +19,7 @@ const NewListingsStep7: React.FC = () => {
       {/* Preview Card */}
       <div className="preview-card">
         <img className="author-avatar" src="/Matilda Profile.png" alt="author icon" />
-        <img className="artwork" src="/capturing memories.png" alt="capture memories" />
+        {(imagePreviewUrl != null) ? <img className="artwork" src={imagePreviewUrl} alt="User Selected Image" /> : ""}
         <h6 className="item-title">Capturing Memories</h6>
         <div className="item-price">
           <img className="solana-icon" src="Solana.svg" alt="solana icon" />

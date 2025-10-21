@@ -1,45 +1,61 @@
 /* NewListingsStep3.css */
 
 .step3-container {
-  width: 1440px;
-  height: 900px;
-  position: relative;
+  width: 100%;
+  min-height: 100vh;
   background: #ffffff;
   font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
 .step3-title {
-  position: absolute;
-  top: 100px;
-  left: 525px;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 100px;
+  max-width: 600px;
 }
 
 .step3-title .new-listing-title {
-  text-align: center;
   font-size: 42px;
   font-weight: 800;
   color: #000;
 }
 
 .step3-title .subtitle {
-  width: 422px;
-  text-align: center;
   font-size: 14px;
   line-height: 21px;
   color: #5D5D5B;
+  margin-top: 10px;
 }
 
 .upload-box {
-  position: absolute;
-  top: 263px;
-  left: 406px;
-  width: 628px;
-  height: 360px;
   border: 1px dashed #CFDBD5;
   border-radius: 12px;
-  background: #ffffff;
   text-align: center;
-  padding-top: 60px;
+  padding: 40px 20px;
+  max-width: 628px;
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.upload-box-input {
+  background-color: cadetblue;
+  margin-bottom: 30px;
+}
+
+.upload-box-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .upload-icon {
@@ -62,12 +78,12 @@
   color: #5D5D5B;
 }
 
-.navigation-buttons {
-  position: absolute;
-  top: 726px;
-  left: 406px;
+.navigation-buttons-step3 {
   display: flex;
-  gap: 239px;
+  justify-content: center;
+  gap: 60px;
+  margin-top: auto;
+  margin-bottom: 40px;
 }
 
 .nav-button {
@@ -77,6 +93,7 @@
   font-weight: 700;
   border-radius: 23px;
   border: none;
+  cursor: pointer;
 }
 
 .nav-button.back {
@@ -90,18 +107,16 @@
 }
 
 .step3-progress-bar {
-  position: absolute;
-  bottom: 0;
-  left: 0;
   width: 100%;
   height: 8px;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), #7A52F4;
+  background: #e5e5e5;
+  position: relative;
 }
 
 .step3-progress-bar .progress-fill {
   width: 615px;
+  max-width: 100%;
   height: 100%;
   background: #7A52F4;
   border-radius: 0 15px 15px 0;
 }
-

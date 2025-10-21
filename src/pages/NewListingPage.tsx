@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ChangeEvent } from 'react';
 import UploadItem from "../components/NewListingsStep2";
 import NewListingsStep3 from "../components/NewListingsStep3";
 import NewListingsStep4 from "../components/NewListingsStep4";
@@ -11,8 +12,35 @@ export interface StepHandler {
   decrementStepNumber(): void;
 }
 
+export interface ImageData {
+    selectedImage: File | null;
+    imagePreviewUrl: string | null;
+}
+
+interface ImageHandler {
+    handleImageChange(event: ChangeEvent<HTMLInputElement>): void;
+}
+
+export type Images = StepHandler & ImageData & ImageHandler;
+
+
 const NewListing: React.FC<{}> = () => {
     const [stepNumber, setStepNumber] = useState(1);
+    const [selectedImage, setSelectedImage] = useState<File | null>(null);
+    const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
+
+    const handleImageChange = (event: ChangeEvent<HTMLInputElement>) => {
+      const file = event.target.files?.[0];
+      if (file) {
+        setSelectedImage(file);
+        
+        //image is given temporary URL so we can display it and send it anywhere
+        setImagePreviewUrl(URL.createObjectURL(file));
+      } else {
+        setSelectedImage(null);
+        setImagePreviewUrl(null);
+      }
+    };
 
     function incrementStepNumber() {
         setStepNumber(stepNumber + 1);
@@ -27,7 +55,7 @@ const NewListing: React.FC<{}> = () => {
         case 1:
             return <UploadItem incrementStepNumber={incrementStepNumber} decrementStepNumber={decrementStepNumber} />;
         case 2:
-            return <NewListingsStep3 incrementStepNumber={incrementStepNumber} decrementStepNumber={decrementStepNumber} />;
+            return <NewListingsStep3 incrementStepNumber={incrementStepNumber} decrementStepNumber={decrementStepNumber} imagePreviewUrl={imagePreviewUrl} handleImageChange={handleImageChange} selectedImage={selectedImage} />;
         case 3:
             return <NewListingsStep4 incrementStepNumber={incrementStepNumber} decrementStepNumber={decrementStepNumber} />;
         case 4:
@@ -35,7 +63,7 @@ const NewListing: React.FC<{}> = () => {
         case 5:
             return <NewListingsStep6 incrementStepNumber={incrementStepNumber} decrementStepNumber={decrementStepNumber} />;
         case 6:
-            return <NewListingsStep7 />;
+            return <NewListingsStep7 selectedImage={selectedImage} imagePreviewUrl={imagePreviewUrl}/>;
     }
 
     return <></>;
