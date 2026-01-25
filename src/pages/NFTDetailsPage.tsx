@@ -14,7 +14,7 @@ const NFTDetails: React.FC<{}> = () => {
             </div>
             <NFTDetailsRelated />
         </div>
-        );
+    );
 }
 
 export default NFTDetails;

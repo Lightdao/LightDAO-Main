@@ -12,6 +12,10 @@
   padding: 0 20px;
 }
 
+.drop-nft-card-link {
+  text-decoration: none;
+  color: #000;
+}
 
 .drop-nft-card {
   background-color: white;

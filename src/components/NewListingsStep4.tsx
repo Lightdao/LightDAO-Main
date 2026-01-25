@@ -1,9 +1,10 @@
-import React from 'react';
-import { StepHandler } from '../pages/NewListingPage';
+import React, { useState } from 'react';
+import { NftHandles} from '../pages/NewListingPage';
 import './NewListingsStep4.css';
 import NewListingTopBar from './NewListingTopBar';
 
-const NewListingsStep4: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNumber}) => {
+const NewListingsStep4: React.FC<NftHandles> = ({incrementStepNumber, decrementStepNumber, data, handleInputChange}) => {
+  
   return (
     <div className="step4-container">
       <NewListingTopBar />
@@ -20,7 +21,7 @@ const NewListingsStep4: React.FC<StepHandler> = ({incrementStepNumber, decrement
       <div className="form">
         <div className="form-group">
           <label>Name your item</label>
-          <input type="text" placeholder="e.g. Redeemable T-Shirt with Logo" />
+          <input name="name" type="text" value={data.name} onChange={handleInputChange} placeholder="e.g. Redeemable T-Shirt with Logo" required/>
         </div>
         <div className="form-group">
           <label>Enter short description</label>
@@ -37,7 +38,7 @@ const NewListingsStep4: React.FC<StepHandler> = ({incrementStepNumber, decrement
         <div className="form-group split">
           <div>
             <label>Set item price or starting bid</label>
-            <input type="text" placeholder="e.g. 0,01 Sol" />
+            <input name="price" type="text" value={data.price} onChange={handleInputChange} placeholder="e.g. 0,01 Sol" required/>
           </div>
           <div>
             <label>Select royalties amount, %</label>

@@ -6,6 +6,7 @@ import {
   useLocation,
 } from "react-router-dom";
 import LandingV from "./pages/LandingV";
+import LandingPage from "./pages/LandingPage";
 import Donor00A from "./pages/Donor00A";
 import Donor01A from "./pages/Donor01A";
 import Login from "./pages/Login";
@@ -66,7 +67,8 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<LandingV />} />
+      <Route path="/" element={<LandingPage />} />
+      <Route path="/LandingV" element={<LandingPage />} />
       <Route path="/Login" element={<Login />} />
       <Route path="/Dashboard" element={<Dashboard />} />
       <Route path="/YourCollections" element={<YourCollections />} />
@@ -84,7 +86,7 @@ function App() {
       <Route path="/Donor00A" element={<Donor00A />} />
       <Route path="/Donor01A" element={<Donor01A />} />
       <Route path="/Collections" element={<Collections />} />
-      <Route path="/NFTDetails" element={<NFTDetails />} />
+      <Route path="/NFTDetails/:id" element={<NFTDetails />} />
       <Route path="/CreateListing" element={<NewListing />} />
       <Route path="/CreateListingOnePage" element={<NewListingsOnePage />} />
     </Routes>

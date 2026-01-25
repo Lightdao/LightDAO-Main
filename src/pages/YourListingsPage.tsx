@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import Empty from "../components/EmptyPage";
 import ListingsListV1 from "../components/ListingsListV1";
 import MainFooter from "../components/MainFooter";
@@ -5,8 +6,27 @@ import MainHeader from "../components/MainHeader";
 import MainSideBar, { MainPageToLoad } from "../components/MainSideBar";
 import "./YourListingsPage.css";
 
+async function getNFTData()
+{
+    //uri route https://gateway.irys.xyz/AgsPKjse94oHAARRvMQjEeeVtG4aHwXdwGyGdAjzMxpH
+    //regular route "http://localhost:4000/grab-assets"
+    const route: string = "http://localhost:4000/grab-assets";
+    const assetJson = await fetch(route).then(res => res.json());
+
+    console.log(assetJson);
+    return assetJson;
+}
+
+interface NftData {
+    name: string;
+    description: string;
+    image: string;
+    price: string;
+    properties?: any; //optional if not used
+}
+
 const YourListings: React.FC<{}> = () => {
-    const yourListings = [
+    const [yourListings, setYourListings] = useState([
         {
             name: "Election Season",
             category: "Art",
@@ -52,8 +72,39 @@ const YourListings: React.FC<{}> = () => {
             auction: false,
             image: "/tracking on the go.png"
         }
-    ];
+    ]);
+    
+    const [nftData, setNftData] = useState<NftData[]>([]);
 
+    useEffect(() => {
+        async function fetchData() {
+            const json = await getNFTData();
+            setNftData(json);
+        }
+        fetchData();
+    }, []);
+
+    useEffect(() => {
+        //don't run until it's loaded
+        if (!nftData) return;
+        
+        //maps array of nft metadata to
+        nftData.map((nft, index) => (
+            setYourListings(prev => [
+                ...prev,
+                {
+                    name: nft.name,
+                    category: "Art",
+                    blockchain: "Solana",
+                    bid: Number(nft.price),
+                    views: 0,
+                    auction: false,
+                    image: nft.image
+                }
+            ])
+        ));
+    }, [nftData]);
+    
     return (
         <>
             <MainHeader />

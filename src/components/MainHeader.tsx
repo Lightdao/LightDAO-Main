@@ -4,7 +4,7 @@ import "./MainHeader.css";
 const MainHeader: React.FC = () => {
   return (
     <header className="main-header">
-      <div className="logo">LIGHTDAO</div>
+      <a className="logo" href="/">LIGHTDAO</a>
       <input
         type="text"
         className="header-search-bar"

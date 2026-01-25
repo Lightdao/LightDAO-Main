@@ -13,7 +13,7 @@ const NFTDetailsV6 = () => {
 
   const collection = [
     { id: 1, name: "Election Season", author: "Sofielle Balskm", price: "0.45 Sol", img: "/nft1.jpg" },
-    { id: 2, name: "Lorr’s Ad Issues", author: "Damon Peterson", price: "7 Sol", img: "/nft2.jpg" },
+    { id: 2, name: "Lorr's Ad Issues", author: "Damon Peterson", price: "7 Sol", img: "/nft2.jpg" },
     { id: 3, name: "Science Jobs", author: "Ezequiel Dengra", price: "17.59 Sol", img: "/nft3.jpg" },
     { id: 4, name: "Venture Capitalist", author: "Merrit Burgett", price: "3 Sol", img: "/nft4.jpg" },
   ];

@@ -4,10 +4,9 @@ import "./NewListingsStep3.css";
 import NewListingTopBar from "./NewListingTopBar";
 
 
-const NewListingsStep3: React.FC<Images> = ({incrementStepNumber, decrementStepNumber, imagePreviewUrl, handleImageChange, selectedImage}) => {
+const NewListingsStep3: React.FC<Images> = ({incrementStepNumber, decrementStepNumber, imagePreviewUrl, handleImageChange, data, selectedImage}) => {
   
   //NOTE: will need to move this into NewListingPage and pass into NewListingStep3 using props
-  
   
   return (
     <div className="step3-container">
@@ -24,14 +23,12 @@ const NewListingsStep3: React.FC<Images> = ({incrementStepNumber, decrementStepN
       {/* Upload Box */
       
       /*TODO:
-       - allow user to upload image and have preview of it on the page and on future page steps
        - allow user to drag image for uploading
-       - make request to send image to test blockchain on submission
        - figure out how to reserve inputted form data across these components for upload
        */
       }
       <div className="upload-box">
-        <input className="upload-box-input" type="file" accept="image/*" onChange={handleImageChange} />
+        <input className="upload-box-input" type="file" accept="image/*" onChange={handleImageChange} required/>
         
         {(imagePreviewUrl == null) ? <div>
           <div className="upload-icon">⭳</div>
