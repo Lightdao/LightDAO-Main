@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 import MainHeader from "../components/MainHeader";
-import MainSideBar from '../components/MainSideBar';
-import { MainPageToLoad } from '../components/MainSideBar';
-import './HelpCenterHome.css';
+import MainSideBar from "../components/MainSideBar";
+import { MainPageToLoad } from "../components/MainSideBar";
+import "./HelpCenterHome.css";
 
 //TODO: link other help pages to here
 const HelpCenterHome: React.FC = () => {
@@ -59,13 +59,22 @@ const HelpCenterHome: React.FC = () => {
           <h2>Popular help articles</h2>
           <section className="popular-articles">
             <div className="article-card">
-              <h3>I can’t see the artwork on NFT’s marketplace listing, what’s wrong?</h3>
-              <p>NFTs are decentralized and stored on the blockchain forever — so you might be to see</p>
+              <h3>
+                I can’t see the artwork on NFT’s marketplace listing, what’s
+                wrong?
+              </h3>
+              <p>
+                NFTs are decentralized and stored on the blockchain forever — so
+                you might be to see
+              </p>
               <a href="#">Read more</a>
             </div>
             <div className="article-card">
               <h3>How do I change or cancel my experience reservation?</h3>
-              <p>Is our site or your profile not loading? Are you having issues trying to create, buy, or sell NFTs</p>
+              <p>
+                Is our site or your profile not loading? Are you having issues
+                trying to create, buy, or sell NFTs
+              </p>
               <a href="#">Read more</a>
             </div>
           </section>

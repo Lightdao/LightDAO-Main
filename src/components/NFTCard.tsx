@@ -1,5 +1,5 @@
-import React from 'react';
-import './NFTCard.css';
+import React from "react";
+import "./NFTCard.css";
 
 interface NFTCardProps {
   image: string;
@@ -31,16 +31,16 @@ const NFTCard: React.FC<NFTCardProps> = ({
         {artist && <p className="nftcard-artist">{artist}</p>}
         {description && <p className="nftcard-description">{description}</p>}
         {price && (
-          <div className={`nftcard-price ${artist ? 'nftcard-price-without-label' : ''}`}>
+          <div
+            className={`nftcard-price ${artist ? "nftcard-price-without-label" : ""}`}
+          >
             <img src="../../public/Solana.svg" alt="solana icon" />
             <span className="nftcard-price-label">from</span>
             <span className="nftcard-price-value">{price}</span>
             <span className="nftcard-price-currency">sol</span>
           </div>
         )}
-        {badge && (
-          <div className="nftcard-badge">{badge}</div>
-        )}
+        {badge && <div className="nftcard-badge">{badge}</div>}
       </div>
     </div>
   );

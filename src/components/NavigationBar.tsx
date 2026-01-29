@@ -216,7 +216,8 @@ const NavigationBar: FunctionComponent<NavigationBarType> = ({
         style={buttonsLabelFilledRest1Style}
       >
         <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%] rounded-4xl bg-a52f4-primary" />
-        <a href="/CreateListing"
+        <a
+          href="/CreateListing"
           className="absolute top-[calc(50%_-_11px)] left-[26.53%] leading-[21px]"
           style={lable6Style}
         >
@@ -239,7 +240,8 @@ const NavigationBar: FunctionComponent<NavigationBarType> = ({
         className="absolute top-[calc(50%_-_14px)] right-[271px] flex flex-row items-center justify-end gap-[29px] text-left text-base"
         style={links3Style}
       >
-        <a href="Marketplace"
+        <a
+          href="Marketplace"
           className="relative leading-[24px] text-primary"
           style={exploreStyle}
         >
@@ -251,7 +253,11 @@ const NavigationBar: FunctionComponent<NavigationBarType> = ({
         <a href="/Drops" className="relative leading-[24px]" style={dropsStyle}>
           Drops
         </a>
-        <a href="/Dashboard" className="relative leading-[24px]" style={activityStyle}>
+        <a
+          href="/Dashboard"
+          className="relative leading-[24px]"
+          style={activityStyle}
+        >
           Activity
         </a>
       </div>

@@ -4,7 +4,9 @@ import "./MainHeader.css";
 const MainHeader: React.FC = () => {
   return (
     <header className="main-header">
-      <a className="logo" href="/">LIGHTDAO</a>
+      <a className="logo" href="/">
+        LIGHTDAO
+      </a>
       <input
         type="text"
         className="header-search-bar"
@@ -15,7 +17,9 @@ const MainHeader: React.FC = () => {
         <a href="/Stats">Stats</a>
         <a href="/Drops">Drops</a>
         <a href="/Dashboard">Activity</a>
-        <a href="/CreateListing" className="create-btn">Create</a>
+        <a href="/CreateListing" className="create-btn">
+          Create
+        </a>
         <img src="/main profile.png" alt="Profile" className="profile-pic" />
       </nav>
     </header>

@@ -28,7 +28,6 @@ import NFTDetails from "./pages/NFTDetailsPage";
 import NewListing from "./pages/NewListingPage";
 import NewListingsOnePage from "./pages/NewListingsOnePage";
 
-
 function App() {
   const action = useNavigationType();
   const location = useLocation();
@@ -57,7 +56,7 @@ function App() {
 
     if (metaDescription) {
       const metaDescriptionTag: HTMLMetaElement | null = document.querySelector(
-        'head > meta[name="description"]'
+        'head > meta[name="description"]',
       );
       if (metaDescriptionTag) {
         metaDescriptionTag.content = metaDescription;
@@ -79,8 +78,14 @@ function App() {
       <Route path="/Marketplace" element={<Marketplace />} />
       <Route path="/AccountSettings" element={<AccountSettings />} />
       <Route path="/HelpCenter" element={<HelpCenterHome />} />
-      <Route path="/HelpCenter/HelpCenterCategory" element={<HelpCenterCategory />} />
-      <Route path="/HelpCenterHome/HelpCenterCategory/HelpCenterPost" element={<HelpCenterPost />} />
+      <Route
+        path="/HelpCenter/HelpCenterCategory"
+        element={<HelpCenterCategory />}
+      />
+      <Route
+        path="/HelpCenterHome/HelpCenterCategory/HelpCenterPost"
+        element={<HelpCenterPost />}
+      />
       <Route path="/Stats" element={<Stats />} />
       <Route path="/Drops" element={<Drops />} />
       <Route path="/Donor00A" element={<Donor00A />} />

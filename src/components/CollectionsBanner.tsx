@@ -4,7 +4,11 @@ import "./CollectionsBanner.css";
 const CollectionsBanner: React.FC = () => {
   return (
     <div className="collections-banner">
-      <img src="/path/to/banner.jpg" alt="Banner" className="collections-banner-image" />
+      <img
+        src="/path/to/banner.jpg"
+        alt="Banner"
+        className="collections-banner-image"
+      />
       <h1>8SIAN Main Collection</h1>
       <div className="collections-stats">
         <span>8K Items</span>
@@ -13,8 +17,8 @@ const CollectionsBanner: React.FC = () => {
         <span>5.4K Likes</span>
       </div>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit amet varius quam, nec
-        convallis arcu.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sit
+        amet varius quam, nec convallis arcu.
       </p>
     </div>
   );

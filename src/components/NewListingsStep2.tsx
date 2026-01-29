@@ -3,8 +3,13 @@ import { StepHandler } from "../pages/NewListingPage";
 import "./NewListingsStep2.css";
 import NewListingTopBar from "./NewListingTopBar";
 
-const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNumber}) => {
-  const [selected, setSelected] = useState<"single" | "collection" | null>(null);
+const UploadItem: React.FC<StepHandler> = ({
+  incrementStepNumber,
+  decrementStepNumber,
+}) => {
+  const [selected, setSelected] = useState<"single" | "collection" | null>(
+    null,
+  );
 
   return (
     <div className="new-listings-container">
@@ -13,7 +18,8 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
       <div className="step2-title">
         <h1 className="new-listing-title">Upload an item</h1>
         <p className="subtitle">
-          They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.
+          They all serve the same purpose, but each one takes a different
+          approach and makes different tradeoffs.
         </p>
       </div>
 
@@ -21,7 +27,9 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
       <div className="create-listing-card single-item-card">
         <div className="item-art" />
         <h6 className="card-title">Create single item</h6>
-        <button className="select-button" onClick={() => setSelected("single")}>Select</button>
+        <button className="select-button" onClick={() => setSelected("single")}>
+          Select
+        </button>
       </div>
 
       <div className="create-listing-card collection-item-card">
@@ -31,15 +39,24 @@ const UploadItem: React.FC<StepHandler> = ({incrementStepNumber, decrementStepNu
           <div className="layer layer-3" />
         </div>
         <h6 className="card-title">Create collection</h6>
-        <button className="select-button outline" onClick={() => setSelected("collection")}>Select</button>
+        <button
+          className="select-button outline"
+          onClick={() => setSelected("collection")}
+        >
+          Select
+        </button>
       </div>
 
       {/* Navigation Buttons */}
       <div className="navigation-buttons">
         <div>
-          <a href="/Dashboard" className="step2-nav-button back">Back</a>
+          <a href="/Dashboard" className="step2-nav-button back">
+            Back
+          </a>
         </div>
-        <button onClick={incrementStepNumber} className="nav-button next">Next</button>
+        <button onClick={incrementStepNumber} className="nav-button next">
+          Next
+        </button>
       </div>
 
       {/* Progress Bar */}

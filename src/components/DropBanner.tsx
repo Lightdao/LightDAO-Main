@@ -7,7 +7,7 @@ const DropBanner: React.FC = () => {
     <div className="drop-banner">
       <div className="drop-banner-content">
         <h1>Lion of Judah Collection</h1>
-        <Timer initialTimerValueSeconds={68069}/>
+        <Timer initialTimerValueSeconds={68069} />
         <button className="drop-buy-now-btn">Buy Now</button>
       </div>
     </div>

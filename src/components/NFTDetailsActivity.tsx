@@ -11,7 +11,6 @@ const NFTDetailsActivity: React.FC = () => {
     { user: "hashlimbt", amount: "2.87", date: "05 Jul 2023", time: "23:40" },
   ];
 
-
   return (
     <div className="nft-details-activity">
       <ul>
@@ -19,15 +18,20 @@ const NFTDetailsActivity: React.FC = () => {
           <li key={index}>
             <div>
               <div className="nft-details-activity-bid">
-              <p>bid </p>
-              <img src="Solana.svg" alt="" />
-              <p><strong> {bid.amount}</strong></p>
+                <p>bid </p>
+                <img src="Solana.svg" alt="" />
+                <p>
+                  <strong> {bid.amount}</strong>
+                </p>
               </div>
 
               <p>
-              by
-              <strong> {bid.user}</strong>
-              <span> {bid.date} {bid.time}</span>
+                by
+                <strong> {bid.user}</strong>
+                <span>
+                  {" "}
+                  {bid.date} {bid.time}
+                </span>
               </p>
             </div>
           </li>

@@ -12,10 +12,34 @@ const NFTDetailsV6 = () => {
   ];
 
   const collection = [
-    { id: 1, name: "Election Season", author: "Sofielle Balskm", price: "0.45 Sol", img: "/nft1.jpg" },
-    { id: 2, name: "Lorr's Ad Issues", author: "Damon Peterson", price: "7 Sol", img: "/nft2.jpg" },
-    { id: 3, name: "Science Jobs", author: "Ezequiel Dengra", price: "17.59 Sol", img: "/nft3.jpg" },
-    { id: 4, name: "Venture Capitalist", author: "Merrit Burgett", price: "3 Sol", img: "/nft4.jpg" },
+    {
+      id: 1,
+      name: "Election Season",
+      author: "Sofielle Balskm",
+      price: "0.45 Sol",
+      img: "/nft1.jpg",
+    },
+    {
+      id: 2,
+      name: "Lorr's Ad Issues",
+      author: "Damon Peterson",
+      price: "7 Sol",
+      img: "/nft2.jpg",
+    },
+    {
+      id: 3,
+      name: "Science Jobs",
+      author: "Ezequiel Dengra",
+      price: "17.59 Sol",
+      img: "/nft3.jpg",
+    },
+    {
+      id: 4,
+      name: "Venture Capitalist",
+      author: "Merrit Burgett",
+      price: "3 Sol",
+      img: "/nft4.jpg",
+    },
   ];
 
   return (
@@ -26,7 +50,10 @@ const NFTDetailsV6 = () => {
 
         <div className="nft-info">
           <h2> Lion of Judah #777</h2>
-          <p>A collection of 10,000 NFTs minted on Solana blockchain. Each unique artwork is randomly generated.</p>
+          <p>
+            A collection of 10,000 NFTs minted on Solana blockchain. Each unique
+            artwork is randomly generated.
+          </p>
 
           <div className="nft-meta">
             <span>Creator: 0x33cd08ffc...987c</span>

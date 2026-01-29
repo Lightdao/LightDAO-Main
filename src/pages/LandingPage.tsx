@@ -1,8 +1,8 @@
-import React from 'react';
-import NFTCard from '../components/NFTCard';
-import './LandingPage.css';
-import MainHeader from '../components/MainHeader';
-import NavigationFooter from '../components/NavigationFooter';
+import React from "react";
+import NFTCard from "../components/NFTCard";
+import "./LandingPage.css";
+import MainHeader from "../components/MainHeader";
+import NavigationFooter from "../components/NavigationFooter";
 
 const LandingPage: React.FC = () => {
   return (
@@ -15,7 +15,8 @@ const LandingPage: React.FC = () => {
             Discover, collect, and sell Faith Driven NFTs.
           </h1>
           <p className="landingpage-hero-subtitle">
-            Our marketplace is the world's first Christian NFT market for Christian creators worldwide.
+            Our marketplace is the world's first Christian NFT market for
+            Christian creators worldwide.
           </p>
         </div>
       </section>
@@ -58,32 +59,84 @@ const LandingPage: React.FC = () => {
       {/* Top Selling Collections Section */}
       <section className="landingpage-section landingpage-collections">
         <h2 className="landingpage-section-title">
-          Top sellings collections <span className="landingpage-collections-subtitle">last 7 days</span>
+          Top sellings collections{" "}
+          <span className="landingpage-collections-subtitle">last 7 days</span>
         </h2>
-        
+
         <div className="landingpage-collections-grid">
           {[
-            { rank: 1, name: 'Wonders of His Creation', value: '10,450.00', change: '+10.00%' },
-            { rank: 2, name: 'Grace Illuminated: Divine Art', value: '5344.33', change: '+8.94%' },
-            { rank: 3, name: 'Testaments in Every Stroke', value: '33457.59', change: '+12.00%' },
-            { rank: 4, name: 'The Eternal Kingdom Collection', value: '19,320.00', change: '+18.00%' },
-            { rank: 5, name: 'Covenant Chronicles: Art of Faith', value: '4578.40', change: '+13.40%' },
-            { rank: 6, name: 'Sermons in Color and Light', value: '5344.13', change: '+14.50%' },
-            { rank: 7, name: 'Heavenly Promises Illustrated', value: '13457.59', change: '+17.20%' },
-            { rank: 8, name: 'Saints and Miracles', value: '3355.20', change: '+19.30%' },
-            { rank: 9, name: 'A Sacred Journey', value: '6890.34', change: '+7.40%' },
+            {
+              rank: 1,
+              name: "Wonders of His Creation",
+              value: "10,450.00",
+              change: "+10.00%",
+            },
+            {
+              rank: 2,
+              name: "Grace Illuminated: Divine Art",
+              value: "5344.33",
+              change: "+8.94%",
+            },
+            {
+              rank: 3,
+              name: "Testaments in Every Stroke",
+              value: "33457.59",
+              change: "+12.00%",
+            },
+            {
+              rank: 4,
+              name: "The Eternal Kingdom Collection",
+              value: "19,320.00",
+              change: "+18.00%",
+            },
+            {
+              rank: 5,
+              name: "Covenant Chronicles: Art of Faith",
+              value: "4578.40",
+              change: "+13.40%",
+            },
+            {
+              rank: 6,
+              name: "Sermons in Color and Light",
+              value: "5344.13",
+              change: "+14.50%",
+            },
+            {
+              rank: 7,
+              name: "Heavenly Promises Illustrated",
+              value: "13457.59",
+              change: "+17.20%",
+            },
+            {
+              rank: 8,
+              name: "Saints and Miracles",
+              value: "3355.20",
+              change: "+19.30%",
+            },
+            {
+              rank: 9,
+              name: "A Sacred Journey",
+              value: "6890.34",
+              change: "+7.40%",
+            },
           ].map((collection) => (
             <div key={collection.rank} className="landingpage-collections-item">
-              <div className="landingpage-collections-rank">{collection.rank}</div>
+              <div className="landingpage-collections-rank">
+                {collection.rank}
+              </div>
               <div className="landingpage-collections-icon"></div>
               <div className="landingpage-collections-details">
-                <div className="landingpage-collections-name">{collection.name}</div>
+                <div className="landingpage-collections-name">
+                  {collection.name}
+                </div>
                 <div className="landingpage-collections-value">
                   <img src="../../public/Solana.svg" alt="solana icon" />
                   {collection.value}
                 </div>
               </div>
-              <div className="landingpage-collections-change">{collection.change}</div>
+              <div className="landingpage-collections-change">
+                {collection.change}
+              </div>
             </div>
           ))}
         </div>
@@ -138,7 +191,9 @@ const LandingPage: React.FC = () => {
 
       {/* Resources for Getting Started Section */}
       <section className="landingpage-section landingpage-resources">
-        <h2 className="landingpage-section-title">Resources for getting started</h2>
+        <h2 className="landingpage-section-title">
+          Resources for getting started
+        </h2>
         <div className="landingpage-resources-grid">
           <div className="landingpage-resources-card">
             <img
@@ -146,11 +201,16 @@ const LandingPage: React.FC = () => {
               alt="Notebook"
               className="landingpage-resources-image"
             />
-            <h3 className="landingpage-resources-title">I should have received NFTs</h3>
+            <h3 className="landingpage-resources-title">
+              I should have received NFTs
+            </h3>
             <p className="landingpage-resources-description">
-              Unfortunately, it can happen by accident if you're confident you qualify for but didn't receive
+              Unfortunately, it can happen by accident if you're confident you
+              qualify for but didn't receive
             </p>
-            <a href="#" className="landingpage-resources-link">See more details</a>
+            <a href="#" className="landingpage-resources-link">
+              See more details
+            </a>
           </div>
           <div className="landingpage-resources-card">
             <img
@@ -158,11 +218,16 @@ const LandingPage: React.FC = () => {
               alt="Laptop"
               className="landingpage-resources-image"
             />
-            <h3 className="landingpage-resources-title">I think I minted duplicate NFTs</h3>
+            <h3 className="landingpage-resources-title">
+              I think I minted duplicate NFTs
+            </h3>
             <p className="landingpage-resources-description">
-              What's better than an NFT? 2 NFTs! But you don't always want to mint 2 NFTs of the same artwork.
+              What's better than an NFT? 2 NFTs! But you don't always want to
+              mint 2 NFTs of the same artwork.
             </p>
-            <a href="#" className="landingpage-resources-link">See more details</a>
+            <a href="#" className="landingpage-resources-link">
+              See more details
+            </a>
           </div>
           <div className="landingpage-resources-card">
             <img
@@ -170,11 +235,16 @@ const LandingPage: React.FC = () => {
               alt="Desk"
               className="landingpage-resources-image"
             />
-            <h3 className="landingpage-resources-title">The Marketplace isn't working</h3>
+            <h3 className="landingpage-resources-title">
+              The Marketplace isn't working
+            </h3>
             <p className="landingpage-resources-description">
-              Unfortunately, it can happen by accident if you're confident you qualify for but didn't receive
+              Unfortunately, it can happen by accident if you're confident you
+              qualify for but didn't receive
             </p>
-            <a href="#" className="landingpage-resources-link">See more details</a>
+            <a href="#" className="landingpage-resources-link">
+              See more details
+            </a>
           </div>
         </div>
       </section>
@@ -183,7 +253,9 @@ const LandingPage: React.FC = () => {
       <section className="landingpage-section landingpage-browse">
         <h2 className="landingpage-section-title">Browse popular NFTs</h2>
         <div className="landingpage-browse-tabs">
-          <button className="landingpage-browse-tab landingpage-browse-tab-active">All</button>
+          <button className="landingpage-browse-tab landingpage-browse-tab-active">
+            All
+          </button>
           <button className="landingpage-browse-tab">Trending</button>
           <button className="landingpage-browse-tab">Collectibles</button>
           <button className="landingpage-browse-tab">Domain Names</button>
@@ -218,7 +290,7 @@ const LandingPage: React.FC = () => {
         </div>
         <button className="landingpage-loadmore">Load More</button>
       </section>
-      
+
       <NavigationFooter />
     </div>
   );

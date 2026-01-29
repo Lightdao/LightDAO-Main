@@ -1,7 +1,7 @@
-import React from 'react';
-import './NewListingsOnePage.css';
-import MainHeader from '../components/MainHeader';
-import MainFooter from '../components/MainFooter';
+import React from "react";
+import "./NewListingsOnePage.css";
+import MainHeader from "../components/MainHeader";
+import MainFooter from "../components/MainFooter";
 
 const NewListingsOnePage: React.FC = () => {
   return (
@@ -13,13 +13,19 @@ const NewListingsOnePage: React.FC = () => {
 
         <section className="blockchain-section">
           <h2>Choose blockchain</h2>
-          <p>Connect with one of our available wallet providers or create a new one.</p>
+          <p>
+            Connect with one of our available wallet providers or create a new
+            one.
+          </p>
           <button className="solana-button">Solana</button>
         </section>
 
         <section className="item-type-section">
           <h2>Select item type</h2>
-          <p>They all serve the same purpose, but each one takes a different approach and makes different tradeoffs.</p>
+          <p>
+            They all serve the same purpose, but each one takes a different
+            approach and makes different tradeoffs.
+          </p>
           <div className="item-type-buttons">
             <button className="item-type active">Create single item</button>
             <button className="item-type">Create collection</button>
@@ -28,7 +34,10 @@ const NewListingsOnePage: React.FC = () => {
 
         <section className="upload-section">
           <h2>Upload an item</h2>
-          <p>But each one takes a different approach and makes different tradeoffs.</p>
+          <p>
+            But each one takes a different approach and makes different
+            tradeoffs.
+          </p>
           <div className="upload-box">
             <span className="upload-icon">⬆️</span>
             <p>Drag your item to upload</p>
@@ -39,11 +48,17 @@ const NewListingsOnePage: React.FC = () => {
         <section className="form-section">
           <div className="form-group">
             <label>Name your item</label>
-            <input type="text" placeholder="e.g. Redeemable T-Shirt with Logo" />
+            <input
+              type="text"
+              placeholder="e.g. Redeemable T-Shirt with Logo"
+            />
           </div>
           <div className="form-group">
             <label>Enter short description</label>
-            <input type="text" placeholder="e.g. After purchase you will get a T-Shirt" />
+            <input
+              type="text"
+              placeholder="e.g. After purchase you will get a T-Shirt"
+            />
           </div>
           <div className="form-group">
             <label>Add properties</label>
@@ -111,7 +126,9 @@ const NewListingsOnePage: React.FC = () => {
           </div>
           <div className="notification-option">
             <div>
-              <strong>Receive messages about your account, your trips, legal alerts</strong>
+              <strong>
+                Receive messages about your account, your trips, legal alerts
+              </strong>
               <p>Account support</p>
             </div>
             <div className="switch off" />

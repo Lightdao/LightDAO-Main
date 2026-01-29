@@ -11,10 +11,38 @@ type StatsRow = {
 };
 
 const statsData: StatsRow[] = [
-  { rank: 1, collection: "Bored Ape Yacht Club", volume: "4.8K", change: "+10.5%", floorPrice: "75.0 ETH", owners: "6K" },
-  { rank: 2, collection: "Azuki", volume: "3.6K", change: "-5.2%", floorPrice: "11.2 ETH", owners: "2K" },
-  { rank: 3, collection: "CryptoPunks", volume: "6.0K", change: "+8.1%", floorPrice: "100.0 ETH", owners: "10K" },
-  { rank: 4, collection: "CloneX", volume: "2.5K", change: "-3.7%", floorPrice: "7.5 ETH", owners: "3K" },
+  {
+    rank: 1,
+    collection: "Bored Ape Yacht Club",
+    volume: "4.8K",
+    change: "+10.5%",
+    floorPrice: "75.0 ETH",
+    owners: "6K",
+  },
+  {
+    rank: 2,
+    collection: "Azuki",
+    volume: "3.6K",
+    change: "-5.2%",
+    floorPrice: "11.2 ETH",
+    owners: "2K",
+  },
+  {
+    rank: 3,
+    collection: "CryptoPunks",
+    volume: "6.0K",
+    change: "+8.1%",
+    floorPrice: "100.0 ETH",
+    owners: "10K",
+  },
+  {
+    rank: 4,
+    collection: "CloneX",
+    volume: "2.5K",
+    change: "-3.7%",
+    floorPrice: "7.5 ETH",
+    owners: "3K",
+  },
 ];
 
 const StatsTable: React.FC = () => {
@@ -38,7 +66,11 @@ const StatsTable: React.FC = () => {
               <td>{row.rank}</td>
               <td>{row.collection}</td>
               <td>{row.volume}</td>
-              <td className={parseFloat(row.change) > 0 ? "positive" : "negative"}>{row.change}</td>
+              <td
+                className={parseFloat(row.change) > 0 ? "positive" : "negative"}
+              >
+                {row.change}
+              </td>
               <td>{row.floorPrice}</td>
               <td>{row.owners}</td>
             </tr>

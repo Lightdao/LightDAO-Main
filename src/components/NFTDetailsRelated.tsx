@@ -3,7 +3,11 @@ import "./NFTDetailsRelated.css";
 
 const relatedNFTs = [
   { title: "Election Season", price: "0.45 SOL", image: "/Lion.png" },
-  { title: "Ler's AI Issues", price: "7 SOL", image: "/capturing memories.png" },
+  {
+    title: "Ler's AI Issues",
+    price: "7 SOL",
+    image: "/capturing memories.png",
+  },
   { title: "Science Jobs", price: "12.5 SOL", image: "/Lion.png" },
   { title: "Venture Capitalist", price: "5.3 SOL", image: "/Lion.png" },
 ];

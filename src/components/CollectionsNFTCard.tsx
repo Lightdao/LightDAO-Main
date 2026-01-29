@@ -7,7 +7,11 @@ type CollectionsNFTCardProps = {
   image: string;
 };
 
-const CollectionsNFTCard: React.FC<CollectionsNFTCardProps> = ({ title, price, image }) => {
+const CollectionsNFTCard: React.FC<CollectionsNFTCardProps> = ({
+  title,
+  price,
+  image,
+}) => {
   return (
     <div className="collections-nft-card">
       <img src={image} alt={title} className="collections-nft-image" />

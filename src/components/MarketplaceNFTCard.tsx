@@ -5,9 +5,13 @@ interface NFTCardProps {
   title: string;
   price: string;
   image: string;
-};
+}
 
-const MarketplaceNFTCard: React.FC<NFTCardProps> = ({ title, price, image }) => {
+const MarketplaceNFTCard: React.FC<NFTCardProps> = ({
+  title,
+  price,
+  image,
+}) => {
   return (
     <div className="marketplace-nft-card">
       <img className="marketplace-nft-image" src={image} alt={title} />
